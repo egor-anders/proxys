@@ -1,0 +1,13 @@
+@import 'vendor/normalize.scss';
+@import 'variables.scss';
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: $color-main;
+  font-weight: 400;
+}
+
