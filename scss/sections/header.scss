@@ -5,6 +5,7 @@
 
   &__nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background: transparent;
   }
@@ -33,7 +34,7 @@
 
 
     &:hover {
-      color: $color-hover;
+      color: $color-brand;
     }
   }
 
@@ -96,7 +97,7 @@
 
     &:hover {
       .header__text {
-        color: $color-hover;
+        color: $color-brand;
       }
     }
 

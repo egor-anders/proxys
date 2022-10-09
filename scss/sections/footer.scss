@@ -26,11 +26,11 @@
     text-transform: uppercase;
 
     &:hover {
-      color: $color-hover;
+      color: $color-brand;
       text-decoration: none;
 
       span {
-        color: $color-hover;
+        color: $color-brand;
       }
     }
   }
