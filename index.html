@@ -2,16 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <title>Flashscore.com</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="http://fonts.cdnfonts.com/css/arial" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <title>proxys.io</title>
 </head>
 
-<body>
-  
-
+<body id="#body">
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <a href="#" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
+        <button class="button header__btn">Купить</button>
+        <ul class="header__list">
+          <li><a href="#" class="header__link">цены</a></li>
+          <li><a href="#" class="header__link">контакты</a></li>
+          <li><a href="#" class="header__link">faq</a></li>
+          <li><a href="#" class="header__link">блог</a></li>
+          <li><a href="#" class="header__link">прокси-чекер</a></li>
+          <li class="dropdown">
+            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="header__flag" src="/assets/img/icons/russia.svg"></img>
+              <span>ru</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li class="active"><img class="header__flag" src="/assets/img/icons/russia.svg"></img> ru</li>
+              <li><img class="header__flag" src="/assets/img/icons/eng.svg"></img>en</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header__right">
+          <div class="header__item">
+            <div class="header__icon"><img src="/assets/img/icons/wallet.svg" alt=""></div>
+            <span class="header__text">132 000 RUB</span>
+            <span class="caret"></span>
+          </div>
+          <div class="header__item">
+            <div class="header__icon"><img src="/assets/img/icons/profile.svg" alt=""></div>
+            <span class="header__text">Вход</span>
+            <span class="caret"></span>
+          </div>
+          <div class="header__item header__item--cart">
+            <div class="header__icon"><img src="/assets/img/icons/cart.svg" alt=""></div>
+            <span class="header__text">5 110 RUB</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"
+    integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 
