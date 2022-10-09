@@ -1,6 +1,7 @@
 @import 'vendor/normalize.scss';
 @import 'variables.scss';
 @import 'sections/header.scss';
+@import 'sections/footer.scss';
 
 
 * {
@@ -63,7 +64,7 @@ h3 {
   line-height: 15px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  background: #88C136;
+  background: $color-hover;
   border: none;
   border-radius: 5px;
 
@@ -82,6 +83,12 @@ ul {
 
 a {
   &:hover {
+    color: $color-hover;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $color-hover;
     text-decoration: none;
   }
 }

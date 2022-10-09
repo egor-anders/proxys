@@ -32,7 +32,7 @@
 
 
     &:hover {
-      color: #88C136;
+      color: $color-hover;
     }
   }
 
@@ -95,7 +95,7 @@
 
     &:hover {
       .header__text {
-        color: #88C136;
+        color: $color-hover;
       }
     }
 
