@@ -64,6 +64,7 @@
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__left {
@@ -194,4 +195,132 @@
     padding-right: 40px;
     padding-left: 12px;
   }
+
+  &__main {
+    box-sizing: border-box;
+    width: 900px;
+    margin-top: 18px;
+    padding: 20px 32px;
+    background: #1E1E1E;
+    border: 1px solid #0C0C0C;
+    border-radius: 5px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__main-title {
+    margin: 0;
+    margin-top: 4px;
+  }
+
+  &__info-right {
+    margin-top: 5px;
+    padding-right: 42px;
+    color: rgb(255 255 255 / 60%);
+
+    &--darker {
+      color: #787878;
+    }
+  }
+
+
+  &__slider-text {
+    width: 296px;
+    padding: 4px 0 4px 16px;
+    color: #FFFFFF;
+    background: #2B2B2B;
+    border: 1px solid #3E3E3E;
+  }
+
+  &__from-to {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    padding: 0 7px;
+
+
+    span {
+      color: #949494;
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 11px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__range {
+    width: 100%;
+    height: 1px;
+    padding: 0 5px;
+    color: $color-brand;
+    background: transparent;
+    appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: 9px;
+      height: 9px;
+      background: $color-brand;
+      border-radius: 50%;
+      cursor: pointer;
+      appearance: none;
+    }
+  }
+
+  &__dropdown {
+    width: 296px;
+    button {
+      padding: 4px 0;
+      padding-right: 6px;
+      padding-left: 10px;
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    top: 50%;
+    left: 85px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__prompt {
+    position: relative;
+    padding-right: 35px;
+
+    &::after{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_56_9082)'%3E%3Cpath opacity='0.4' d='M22.9999 11.9998C22.9999 17.5238 18.5229 21.9998 12.9999 21.9998C7.47688 21.9998 2.99988 17.5238 2.99988 11.9998C2.99988 6.4778 7.47688 1.9998 12.9999 1.9998C18.5229 1.9998 22.9999 6.4778 22.9999 11.9998' fill='%23343434'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.87 12.6307C13.87 13.1127 13.477 13.5057 12.995 13.5057C12.513 13.5057 12.12 13.1127 12.12 12.6307V8.21069C12.12 7.72869 12.513 7.33569 12.995 7.33569C13.477 7.33569 13.87 7.72869 13.87 8.21069V12.6307ZM12.125 15.8035C12.125 15.3215 12.516 14.9285 12.995 14.9285C13.488 14.9285 13.88 15.3215 13.88 15.8035C13.88 16.2855 13.488 16.6785 13.005 16.6785C12.52 16.6785 12.125 16.2855 12.125 15.8035Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_56_9082' x='-2' y='-2' width='30' height='30' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_56_9082'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_56_9082' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+      transform: translateY(-50%);
+      content: '';
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__unit {
+    color: $color-brand;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    padding: 18px 40px;
+  }
 }
+

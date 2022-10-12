@@ -59,13 +59,35 @@ h3 {
     background: #699827;
   }
 
-  &:disabled {
+  &:active {
     background: #57742E;
   }
 
   &--small {
     font-size: 9px;
     line-height: 11px;
+  }
+}
+
+.border-button {
+  color: $color-brand;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: #292A27;
+  border: 1px solid $color-brand;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #699827;
+  }
+
+  &:active {
+    color: #57742E;
+    border: 1px solid #57742E;
   }
 }
 
@@ -126,6 +148,12 @@ a {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.15043 0.410751L8.31484 5.54683C8.38534 5.66186 8.37859 5.80913 8.29534 5.91684C7.91957 6.4048 7.53855 6.84074 7.21829 7.13162C7.21829 7.13162 6.96177 7.3822 6.79902 7.49063C6.577 7.66574 6.28674 7.75 6.00473 7.75C5.68821 7.75 5.38894 7.65768 5.14968 7.47378C5.10693 7.43202 4.91867 7.27303 4.76491 7.12283C3.80787 6.24654 2.22679 3.95912 1.74751 2.75606C1.67026 2.58095 1.509 2.1135 1.5 1.87098C1.5 1.63726 1.551 1.41159 1.66276 1.19472C1.81652 0.928023 2.05503 0.719209 2.33779 0.60198C2.5343 0.526514 3.12383 0.410018 3.14108 0.410018C3.56185 0.334552 4.15288 0.278136 4.84292 0.250294C4.96667 0.245165 5.08668 0.307443 5.15043 0.410751Z' fill='white' fill-opacity='0.6'/%3E%3Cpath opacity='0.4' d='M6.85479 0.754268C6.71454 0.52787 6.89379 0.242858 7.16306 0.253848C7.79459 0.280958 8.35112 0.327849 8.76514 0.384998C8.77414 0.39379 9.50843 0.510286 9.75669 0.644366C10.218 0.878091 10.5 1.33675 10.5 1.82984V1.87087C10.4917 2.18885 10.2097 2.86512 10.1925 2.86512C10.0507 3.20581 9.81069 3.65055 9.52193 4.12899C9.39142 4.3444 9.07115 4.34953 8.9384 4.13412L6.85479 0.754268Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   border: none;
+
+  &--additionally {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1328 16.7857L8.91354 9.93756C8.81954 9.78418 8.82854 9.58782 8.93955 9.44422C9.44057 8.7936 9.9486 8.21234 10.3756 7.82451C10.3756 7.82451 10.7176 7.49041 10.9346 7.34582C11.2307 7.11234 11.6177 7 11.9937 7C12.4157 7 12.8147 7.12309 13.1338 7.36829C13.1908 7.42398 13.4418 7.63597 13.6468 7.83623C14.9228 9.00461 17.031 12.0545 17.67 13.6586C17.773 13.8921 17.988 14.5153 18 14.8387C18 15.1503 17.932 15.4512 17.783 15.7404C17.578 16.096 17.26 16.3744 16.8829 16.5307C16.6209 16.6313 15.8349 16.7866 15.8119 16.7866C15.2509 16.8873 14.4628 16.9625 13.5428 16.9996C13.3778 17.0064 13.2178 16.9234 13.1328 16.7857Z' fill='%2388C136'/%3E%3Cpath opacity='0.4' d='M10.8605 16.3277C11.0475 16.6296 10.8085 17.0096 10.4495 16.995C9.60746 16.9588 8.86542 16.8963 8.31339 16.8201C8.30139 16.8084 7.32234 16.653 6.99133 16.4743C6.3763 16.1626 6.00028 15.5511 6.00028 14.8936L6.00028 14.8389C6.01128 14.4149 6.3873 13.5133 6.4103 13.5133C6.59931 13.059 6.91932 12.466 7.30434 11.8281C7.47835 11.5409 7.90537 11.534 8.08238 11.8213L10.8605 16.3277Z' fill='%2388C136'/%3E%3C/svg%3E%0A");
+  }
 }
 
 .dropdown {
@@ -242,5 +270,93 @@ a {
   &:focus {
     color: #FFFFFF;
     border: 1px solid rgb(255 255 255 / 40%);
+  }
+}
+
+
+.marker {
+  padding: 3px 8px;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  &--hit {
+    color: #C98933;
+    background: #342D22;
+  }
+
+  &--exclusive {
+    color: #FFFFFF;
+    background: #8251AA;
+  }
+}
+
+.buy-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+  background: #1E1E1E;
+
+  &--additionally {
+    padding: 10px 24px;
+  }
+
+  &--color {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: rgb(255 255 255 / 5%);
+  }
+
+  &--border {
+    border-radius: 5px;
+  }
+
+  &--transparent {
+    background: transparent;
+  }
+
+  &--margin {
+    margin-top: 10px;
+  }
+}
+
+.additionally {
+  margin-top: 10px;
+  padding: 14px 8px 10px;
+  background: #292A27;
+  border: 1px solid #3D3D3D;
+  border-radius: 5px;
+
+  &__rows {
+    margin-top: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}
+
+
+.result {
+  display: flex;
+  gap: 10px;
+
+  &__all {
+    margin: 0;
+  }
+
+  &__unit {
+    margin-top: 27px;
   }
 }
