@@ -2,6 +2,10 @@
   padding: 32px 0 24px;
   background: #1E1E1E;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 38px 0 32px;
+  }
+
   &__top {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +15,10 @@
   &__info {
     display: flex;
     gap: 30px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 24px;
+    }
   }
 
   &__link {
@@ -25,6 +33,11 @@
     text-align: center;
     text-transform: uppercase;
 
+    @media (max-width: $breakpoint-lg) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     &:hover {
       color: $color-brand;
       text-decoration: none;
@@ -38,12 +51,21 @@
   &__social {
     display: flex;
     gap: 30px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 38px;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
     margin-top: 24px;
+
+    @media (max-width: $breakpoint-lg) {
+      align-items: flex-end;
+      margin-top: 30px;
+    }
   }
 
   &__copyright {
@@ -54,6 +76,10 @@
     font-family: 'Arial', sans-serif;
     font-style: normal;
     line-height: 16px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
   }
 
   &__adv {

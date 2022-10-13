@@ -4,24 +4,46 @@ h1 {
   color: #FFFFFF;
   font-size: 58px;
   line-height: 68px;
+
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 44px;
+    margin-bottom: 6px;
+    font-size: 33px;
+    line-height: 38px;
+  }
 }
 
 h2 {
   color: #FFFFFF;
   font-size: 40px;
   line-height: 52px;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 h3 {
   color: #FFFFFF;
   font-size: 28px;
   line-height: 38px;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .subtitle {
   color: #FFFFFF;
   font-size: 24px;
   line-height: 30px;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .text {
@@ -30,6 +52,11 @@ h3 {
   line-height: 15px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .body__text {
@@ -37,8 +64,26 @@ h3 {
   font-family: 'Arial', sans-serif;
   line-height: 130%;
 
+  @media (max-width: $breakpoint-lg) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
   &--small {
     font-size: 14px;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+}
+
+.container {
+  width: calc(1160px + 15px + 15px);
+
+  @media (max-width: $breakpoint-lg) {
+    width: calc(640px + 15px + 15px);
   }
 }
 
@@ -55,6 +100,11 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
 
+  @media (max-width: $breakpoint-lg) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   &:hover {
     background: #699827;
   }
@@ -66,6 +116,11 @@ h3 {
   &--small {
     font-size: 9px;
     line-height: 11px;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 8px;
+      line-height: 9px;
+    }
   }
 }
 
@@ -80,6 +135,11 @@ h3 {
   border: 1px solid $color-brand;
   border-radius: 5px;
   outline: none;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 10px;
+    line-height: 12px;
+  }
 
   &:hover {
     border: 1px solid #699827;
@@ -104,6 +164,11 @@ h3 {
   border-radius: 5px;
   box-shadow: 0 4px 9px rgb(0 0 0 / 20%);
   cursor: pointer;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 10px;
+    line-height: 12px;
+  }
 
   &:hover {
     color: #FFFFFF;
@@ -163,6 +228,12 @@ a {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
+
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 
   button {
@@ -219,6 +290,11 @@ a {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -283,6 +359,11 @@ a {
   text-transform: uppercase;
   border-radius: 4px;
 
+  @media (max-width: $breakpoint-lg) {
+    font-size: 8px;
+    line-height: 9px;
+  }
+
   &--hit {
     color: #C98933;
     background: #342D22;
@@ -301,14 +382,29 @@ a {
   padding: 10px 32px;
   background: #1E1E1E;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 13px 16px;
+  }
+
+
   &--additionally {
     padding: 10px 24px;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 13px 8px;
+      padding-right: 12px;
+    }
   }
 
   &--color {
     padding-top: 6px;
     padding-bottom: 6px;
     background: rgb(255 255 255 / 5%);
+
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
   }
 
   &--border {
@@ -358,5 +454,9 @@ a {
 
   &__unit {
     margin-top: 27px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 17px;
+    }
   }
 }

@@ -1,4 +1,8 @@
 .filter {
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 15px;
+  }
+
   &__container {
     width: 1560px;
     margin: 0 auto;
@@ -6,13 +10,25 @@
     background: #1E1E1E;
     border: 1px solid #0E0E0E;
     border-radius: 5px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 640px;
+      padding: 18px 22px 22px 54px;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: flex-end;
     gap: 16px;
-    margin: 0 0 32px;
+    width: 1160px;
+    margin: 0 auto 32px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-wrap: wrap;
+      width: 564px;
+      margin: 0 0 28px;
+    }
   }
 
   &__total {
@@ -24,6 +40,10 @@
     height: 50px;
     border: 1px solid #88C136;
     border-radius: 5px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
   }
 
   &__result {
@@ -31,10 +51,19 @@
     flex-direction: column;
     gap: 3px;
     padding-left: 24px;
+
+    @media (max-width: $breakpoint-lg) {
+      padding-left: 50px;
+    }
   }
 
   &__all {
     color: $color-brand;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 14px;
+      line-height: 130%;
+    }
   }
 
   &__button {
@@ -42,6 +71,13 @@
     right: -8px;
     height: 51px;
     padding: 18px 40px;
+    box-shadow: 0 4px 7px rgb(136 193 54 / 17%);
+
+    @media (max-width: $breakpoint-lg) {
+      right: 0;
+      width: 268px;
+      padding: 18px 0;
+    }
   }
 
   &__unit {
@@ -54,13 +90,23 @@
 
   &__options {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 6px;
+
+    @media (max-width: $breakpoint-lg) {
+      row-gap: 18px;
+      column-gap: 28px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 268px;
+    }
   }
 
   &__name {
@@ -88,10 +134,18 @@
 
     &--1 {
       width: 242px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
     }
 
     &--2 {
       width: 168px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
     }
   }
 
@@ -99,12 +153,25 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-right: 30px;
+    width: 1160px;
+    margin: 0 auto;
+    padding-right: 30px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-wrap: wrap;
+      row-gap: 18px;
+      width: 554px;
+      padding-right: 0;
+    }
   }
 
   &__benefit {
     display: flex;
     gap: 14px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 50%;
+    }
   }
 
   &__icon {
@@ -126,6 +193,11 @@
 
   &__benefit-name{
     margin: 0;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__descr {

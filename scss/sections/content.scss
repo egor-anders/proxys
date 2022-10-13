@@ -1,11 +1,19 @@
 .content {
   margin-bottom: 100px;
 
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 50px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 49px;
+    }
   }
 
   &__title {
@@ -17,6 +25,10 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 6px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 10px;
+    }
 
     span {
       color: rgb(255 255 255 / 40%);
@@ -72,6 +84,10 @@
     flex-direction: column;
     width: 215px;
     margin-top: 19px;
+
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
   }
 
   &__countries {
@@ -204,12 +220,22 @@
     background: #1E1E1E;
     border: 1px solid #0C0C0C;
     border-radius: 5px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      padding: 18px 26px;
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      gap: 6px;
+    }
   }
 
   &__main-title {
@@ -222,8 +248,20 @@
     padding-right: 42px;
     color: rgb(255 255 255 / 60%);
 
+    @media (max-width: $breakpoint-lg) {
+      padding-right: 0;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
     &--darker {
       color: #787878;
+    }
+  }
+
+  &__br {
+    @media (max-width: $breakpoint-lg) {
+      display: none;
     }
   }
 
@@ -234,6 +272,10 @@
     color: #FFFFFF;
     background: #2B2B2B;
     border: 1px solid #3E3E3E;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 268px;
+    }
   }
 
   &__from-to {
@@ -272,6 +314,11 @@
 
   &__dropdown {
     width: 296px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 268px;
+    }
+
     button {
       padding: 4px 0;
       padding-right: 6px;
@@ -308,6 +355,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 24px;
+    }
   }
 
   &__unit {
@@ -317,10 +368,18 @@
   &__buttons {
     display: flex;
     gap: 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 13px;
+    }
   }
 
   &__button {
     padding: 18px 40px;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 18px 32px;
+    }
   }
 }
 
