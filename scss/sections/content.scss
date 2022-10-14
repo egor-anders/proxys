@@ -45,6 +45,29 @@
     align-items: center;
     gap: 9px;
     margin-top: 37px;
+
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  &__mobile-filters {
+    display: none;
+
+    @media (max-width: $breakpoint-lg) {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      margin-top: 10px;
+    }
+  }
+
+  &__mobile-dropdown {
+    width: 312px;
+
+    button {
+      padding: 14px 16px;
+    }
   }
 
   &__filter {
@@ -108,6 +131,10 @@
       width: 2px;
       height: 108px;
       background: #FFFFFF;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 16px;
     }
   }
 
