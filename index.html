@@ -202,17 +202,17 @@
         </div>
 
         <div class="content__filters">
-          <div class="content__filter tab tab--active">Индивидуальные IPV4 <span class="marker marker--hit">хит
+          <div class="content__filter tab">Индивидуальные IPV4 <span class="marker marker--hit">хит
               продаж</span></div>
           <div class="content__filter tab">Шареды (расшаренные) <span class="popular">популярное</span></div>
-          <div class="content__filter tab">Мобильные</div>
+          <div class="content__filter tab tab--active">Мобильные</div>
           <div class="content__filter tab">Резидентские IPv4</div>
           <div class="content__filter tab">Индивидуальные IPv6 </div>
           <div class="content__filter tab">Динамические IPV6</div>
         </div>
 
         <div class="content__mobile-filters">
-          <div class="content__mobile-dropdown dropdown dropdown--mobile">
+          <div class="content__mobile-dropdown content__mobile-dropdown--hit dropdown dropdown--mobile">
             <button id="dLabel-13" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Индивидуальные IPV4</span>
               <span class="marker marker--hit marker--mobile">хит продаж</span>
@@ -314,10 +314,10 @@
             </form>
           </div>
 
-          <div class="content__main">
+          <div class="content__main content__main--individual">
             <div class="content__info">
               <div class="content__info-left">
-                <span class="marker marker--hit">хит продаж</span>
+                <span class="marker marker--hit content__mark">хит продаж</span>
                 <h3 class="content__main-title">Индивидуальные IPV4</h3>
               </div>
               <div class="content__info-right body__text body__text--small">
@@ -448,6 +448,158 @@
                       <li>Санкт-Петербург</li>
                       <li>Калининград</li>
                       <li>Калининград</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content__footer">
+              <div class="content__result result">
+                <h2 class="content__all result__all">5 100 RUB</h2>
+                <span class="content__unit result__unit text">2 555 RUB за шт.</span>
+              </div>
+
+              <div class="content__buttons">
+                <button class="border-button content__button content__button--cart">добавить в корзину</button>
+                <button class="button content__button content__button--buy">купить</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="content__main content__main--mobile">
+            <div class="content__info">
+              <div class="content__info-left">
+                <h3 class="content__main-title">Мобильные</h3>
+              </div>
+              <div class="content__info-right body__text body__text--small">
+                Идеально подходят для работы с сайтами, <br class="content__br">
+                где нужна высокая анонимность <span class="content__info-right--darker">(например, <br
+                    class="content__br"> Facebook)</span>
+              </div>
+            </div>
+            <div class="content__options">
+              
+              <div class="buy-row buy-row--color buy-row--border">
+                <div class="content__option body__text body__text--small">Город</div>
+                <div class="content__dropdown dropdown dropdown--filter">
+                  <button id="dLabel-15" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Москва</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-15">
+                    <li>Москва</li>
+                    <li>Москва</li>
+                    <li>Москва</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row">
+                <div class="content__option body__text body__text--small">Количество IP адрессов</div>
+                <div class="content__slider">
+                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
+                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                  <div class="content__from-to">
+                    <span>1</span>
+                    <span>200</span>
+                  </div>
+                </div>
+              </div>
+              <div class="buy-row buy-row--color buy-row--border">
+                <div class="content__option body__text body__text--small">Период аренды</div>
+                <div class="content__dropdown dropdown dropdown--filter">
+                  <button id="dLabel-16" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>30 дней</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-16">
+                    <li>7 дней</li>
+                    <li>14 дней</li>
+                    <li>60 дней</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="buy-row">
+                <div class="content__option body__text body__text--small">pOSf - отпечаток</div>
+                <div class="content__dropdown dropdown dropdown--filter">
+                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
+                  <button id="dLabel-17" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Windows</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-17">
+                    <li>Windows</li>
+                    <li>Windows</li>
+                    <li>Windows</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="content__additionally additionally">
+              <div class="content__additionally-header additionally__header">
+                <h4 class="text additionally__title">дополнительные параметры</h4>
+                <div class="caret caret--additionally"></div>
+              </div>
+              <div class="additionally__rows">
+                <div class="buy-row buy-row--border buy-row--additionally">
+                  <div class="body__text body__text--small content__prompt">Скорость</div>
+                  <div class="content__dropdown dropdown dropdown--filter">
+                    <button id="dLabel-18" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <span>не выбрано</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel-18">
+                      <li>не выбрано</li>
+                      <li>не выбрано</li>
+                      <li>не выбрано</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="buy-row buy-row--additionally  buy-row--transparent">
+                  <div class="body__text body__text--small content__prompt">Трафик</div>
+                  <div class="content__dropdown dropdown dropdown--filter">
+                    <button id="dLabel-19" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <span>Безлимитный</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel-19">
+                      <li>Безлимитный</li>
+                      <li>Безлимитный</li>
+                      <li>Безлимитный</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="buy-row buy-row--border buy-row--additionally">
+                  <div class="body__text body__text--small content__prompt">Сервер</div>
+                  <div class="content__dropdown dropdown dropdown--filter">
+                    <button id="dLabel-20" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <span>S1</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel-20">
+                      <li>S2</li>
+                      <li>S3</li>
+                      <li>S4</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="buy-row buy-row--additionally  buy-row--transparent">
+                  <div class="body__text body__text--small content__prompt">Количество подсетей в заказе</div>
+                  <div class="content__dropdown dropdown dropdown--filter">
+                    <button id="dLabel-21" type="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <span>1</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel-21">
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
                     </ul>
                   </div>
                 </div>

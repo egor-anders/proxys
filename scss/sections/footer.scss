@@ -97,6 +97,11 @@
     @media (max-width: $breakpoint-lg) {
       margin: 0;
     }
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 
   &__adv {
