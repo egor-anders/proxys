@@ -250,6 +250,41 @@ a {
   }
 }
 
+.marker {
+  margin: 0;
+  padding: 3px 8px;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 8px;
+    line-height: 9px;
+  }
+
+  &--hit {
+    color: #C98933;
+    background: #342D22;
+  }
+
+  &--mobile {
+    margin-right: 35px;
+  }
+
+  &--exclusive {
+    color: #FFFFFF;
+    background: #8251AA;
+  }
+
+  &--popular {
+    color: #588EB7;
+    background: #2B3134;
+  }
+}
+
 .dropdown {
   span {
     color: #FFFFFF;
@@ -304,16 +339,42 @@ a {
     border-radius: 5px;
     box-shadow: 0 4px 9px rgb(0 0 0 / 20%);
 
-    button {
-      justify-content: space-between;
-      width: 100%;
-    }
 
     span {
       color: $color-brand;
       font-size: 10px;
       line-height: 12px;
       text-transform: uppercase;
+    }
+
+    button {
+      justify-content: space-between;
+      width: 100%;
+
+      .marker {
+        margin: 0;
+        padding: 3px 8px;
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 11px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 4px;
+
+        @media (max-width: $breakpoint-lg) {
+          font-size: 8px;
+          line-height: 9px;
+        }
+
+        &--hit {
+          color: #C98933;
+          background: #342D22;
+        }
+
+        &--mobile {
+          margin-right: 35px;
+        }
+      }
     }
   }
 }
@@ -406,41 +467,6 @@ a {
   }
 }
 
-
-.marker {
-  margin: 0;
-  padding: 3px 8px;
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 11px;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 4px;
-
-  @media (max-width: $breakpoint-lg) {
-    font-size: 8px;
-    line-height: 9px;
-  }
-
-  &--hit {
-    color: #C98933;
-    background: #342D22;
-  }
-
-  &--mobile {
-    margin-right: 35px;
-  }
-
-  &--exclusive {
-    color: #FFFFFF;
-    background: #8251AA;
-  }
-
-  &--popular {
-    color: #588EB7;
-    background: #2B3134;
-  }
-}
 
 .buy-row {
   display: flex;
