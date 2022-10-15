@@ -3,6 +3,10 @@
     padding: 0 15px;
   }
 
+  @media (max-width: $breakpoint-md) {
+    padding: 0 24px;
+  }
+
   &__container {
     width: 1560px;
     margin: 0 auto;
@@ -14,6 +18,12 @@
     @media (max-width: $breakpoint-lg) {
       width: 640px;
       padding: 18px 22px 22px 54px;
+    }
+
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      padding: 18px 22px 22px;
     }
   }
 
@@ -28,6 +38,12 @@
       flex-wrap: wrap;
       width: 564px;
       margin: 0 0 28px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
     }
   }
 
@@ -55,6 +71,10 @@
     @media (max-width: $breakpoint-lg) {
       padding-left: 50px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      padding-left: 24px;
+    }
   }
 
   &__all {
@@ -77,6 +97,12 @@
       right: 0;
       width: 268px;
       padding: 18px 0;
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 50%;
     }
   }
 
@@ -98,6 +124,10 @@
       row-gap: 18px;
       column-gap: 28px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -106,6 +136,10 @@
 
     @media (max-width: $breakpoint-lg) {
       width: 268px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
     }
   }
 
@@ -163,6 +197,11 @@
       width: 554px;
       padding-right: 0;
     }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__benefit {
@@ -172,10 +211,21 @@
     @media (max-width: $breakpoint-lg) {
       width: 50%;
     }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
+
+  &__br {
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
 
   &__icon {
     width: 28px;
+    min-width: 28px;
     height: 28px;
 
     img {

@@ -6,10 +6,19 @@
     padding: 38px 0 32px;
   }
 
+  @media (max-width: $breakpoint-md) {
+    padding: 32px 0;
+  }
+
   &__top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 
   &__info {
@@ -18,6 +27,10 @@
 
     @media (max-width: $breakpoint-lg) {
       gap: 24px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
     }
   }
 
@@ -55,6 +68,10 @@
     @media (max-width: $breakpoint-lg) {
       gap: 38px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 6px;
+    }
   }
 
   &__bottom {
@@ -90,6 +107,11 @@
     img {
       width: 100%;
       height: 100%;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      width: 118px;
+      height: 36px;
     }
   }
 }

@@ -3,6 +3,10 @@
   background: #232323;
   border-bottom: 1px solid #151515;
 
+  @media (max-width: $breakpoint-lg) {
+    padding: 9px 0;
+  }
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -83,6 +87,10 @@
       padding: 10px 32px 10px 10px;
     }
 
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+
     &::after {
       position: absolute;
       top: 50%;
@@ -123,6 +131,11 @@
       gap: 16px;
       margin-left: 34px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      gap: 24px;
+      margin-left: 0;
+    }
   }
 
 
@@ -158,6 +171,16 @@
     &--cart {
       background: rgb(136 193 54 / 10%);
       border-radius: 5px;
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+
+    &--walet {
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
   }
 

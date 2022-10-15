@@ -14,6 +14,12 @@
     @media (max-width: $breakpoint-lg) {
       margin-top: 49px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
   }
 
   &__title {
@@ -60,10 +66,20 @@
       gap: 16px;
       margin-top: 10px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
   }
 
   &__mobile-dropdown {
     width: 312px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
 
     button {
       padding: 14px 16px;
@@ -110,6 +126,12 @@
 
     @media (max-width: $breakpoint-lg) {
       display: none;
+    }
+  }
+
+  &__mobile-countries {
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
     }
   }
 
@@ -252,6 +274,10 @@
       width: 100%;
       padding: 18px 26px;
     }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 10px 9px;
+    }
   }
 
   &__info {
@@ -292,6 +318,11 @@
     }
   }
 
+  &__slider {
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
 
   &__slider-text {
     width: 296px;
@@ -302,6 +333,10 @@
 
     @media (max-width: $breakpoint-lg) {
       width: 268px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
     }
   }
 
@@ -346,6 +381,11 @@
       width: 268px;
     }
 
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
     button {
       padding: 4px 0;
       padding-right: 6px;
@@ -386,6 +426,12 @@
     @media (max-width: $breakpoint-lg) {
       margin-top: 24px;
     }
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
   }
 
   &__unit {
@@ -397,7 +443,9 @@
     gap: 10px;
 
     @media (max-width: $breakpoint-lg) {
+      justify-content: space-between;
       gap: 13px;
+      width: 100%;
     }
   }
 
@@ -406,6 +454,18 @@
 
     @media (max-width: $breakpoint-lg) {
       padding: 18px 32px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 18px 0;
+
+      &--cart {
+        width: 58%;
+      }
+
+      &--buy {
+        width: 42%;
+      }
     }
   }
 }
