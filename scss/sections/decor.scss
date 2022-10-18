@@ -1,6 +1,8 @@
 .decor {
   &__container {
-    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
     padding-left: 60px;
   }
 
@@ -73,6 +75,90 @@
 
     &--save {
       display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: 514px;
+    margin-left: 41px;
+    padding: 22px 40px;
+    background-image: url(/assets/img/decor-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #0D0D0D;
+    border-radius: 4px;
+  }
+
+  &__result {
+    margin-top: 14px;
+  }
+
+  &__all {
+    margin: 0;
+  }
+
+  &__unit {
+    color: rgb(255 255 255 / 40%);
+  }
+
+  &__stock {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__promo-info {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+  }
+
+  &__promo-text {
+    color: rgb(255 255 255 / 40%);
+  }
+
+  &__benefit {
+    margin-left: 10px;
+    padding: 6px 10px;
+    background: #C75D54;
+    border-radius: 4px;
+  }
+
+  &__discount {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 16px;
+  }
+
+  &__delete {
+    margin-left: 51px;
+    color: $color-brand;
+    cursor: pointer;
+
+    &:hover {
+      color: #699827;
+    }
+
+    &:active {
+      color: #57742E;
+    }
+  }
+
+  &__enter-promo {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 11px 0;
+      padding-left: 12px;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      padding: 11px 22px;
     }
   }
 }
