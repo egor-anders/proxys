@@ -253,12 +253,24 @@ a {
     width: 24px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1328 16.7857L8.91354 9.93756C8.81954 9.78418 8.82854 9.58782 8.93955 9.44422C9.44057 8.7936 9.9486 8.21234 10.3756 7.82451C10.3756 7.82451 10.7176 7.49041 10.9346 7.34582C11.2307 7.11234 11.6177 7 11.9937 7C12.4157 7 12.8147 7.12309 13.1338 7.36829C13.1908 7.42398 13.4418 7.63597 13.6468 7.83623C14.9228 9.00461 17.031 12.0545 17.67 13.6586C17.773 13.8921 17.988 14.5153 18 14.8387C18 15.1503 17.932 15.4512 17.783 15.7404C17.578 16.096 17.26 16.3744 16.8829 16.5307C16.6209 16.6313 15.8349 16.7866 15.8119 16.7866C15.2509 16.8873 14.4628 16.9625 13.5428 16.9996C13.3778 17.0064 13.2178 16.9234 13.1328 16.7857Z' fill='%2388C136'/%3E%3Cpath opacity='0.4' d='M10.8605 16.3277C11.0475 16.6296 10.8085 17.0096 10.4495 16.995C9.60746 16.9588 8.86542 16.8963 8.31339 16.8201C8.30139 16.8084 7.32234 16.653 6.99133 16.4743C6.3763 16.1626 6.00028 15.5511 6.00028 14.8936L6.00028 14.8389C6.01128 14.4149 6.3873 13.5133 6.4103 13.5133C6.59931 13.059 6.91932 12.466 7.30434 11.8281C7.47835 11.5409 7.90537 11.534 8.08238 11.8213L10.8605 16.3277Z' fill='%2388C136'/%3E%3C/svg%3E%0A");
+
+    @media (max-width: $breakpoint-lg) {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
   }
 
   &--close {
     width: 24px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8672 7.21433L15.0865 14.0624C15.1805 14.2158 15.1715 14.4122 15.0605 14.5558C14.5594 15.2064 14.0514 15.7877 13.6244 16.1755C13.6244 16.1755 13.2824 16.5096 13.0654 16.6542C12.7693 16.8877 12.3823 17 12.0063 17C11.5843 17 11.1853 16.8769 10.8662 16.6317C10.8092 16.576 10.5582 16.364 10.3532 16.1638C9.07715 14.9954 6.96905 11.9455 6.33002 10.3414C6.22701 10.1079 6.012 9.48466 6 9.16131C6 8.84967 6.068 8.54879 6.21701 8.25962C6.42202 7.90403 6.74004 7.62561 7.11706 7.46931C7.37907 7.36869 8.16511 7.21336 8.18811 7.21336C8.74914 7.11274 9.53718 7.03751 10.4572 7.00039C10.6222 6.99355 10.7822 7.07659 10.8672 7.21433Z' fill='white' fill-opacity='0.4'/%3E%3Cpath opacity='0.4' d='M13.1395 7.67228C12.9525 7.37041 13.1915 6.9904 13.5505 7.00505C14.3925 7.0412 15.1346 7.10372 15.6866 7.17992C15.6986 7.19164 16.6777 7.34697 17.0087 7.52574C17.6237 7.83737 17.9997 8.44892 17.9997 9.10637V9.16108C17.9887 9.58506 17.6127 10.4867 17.5897 10.4867C17.4007 10.941 17.0807 11.534 16.6957 12.1719C16.5216 12.4591 16.0946 12.466 15.9176 12.1787L13.1395 7.67228Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+
+    @media (max-width: $breakpoint-lg) {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
   }
 
   &--mobile {
@@ -283,6 +295,11 @@ a {
     font-size: 14px;
     font-family: 'Arial', sans-serif;
     line-height: 130%;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 
   img {
@@ -586,6 +603,13 @@ a {
 
   &--decor {
     padding: 10px 16px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 8px 16px;
+    }
   }
 
   &--color {
@@ -622,6 +646,10 @@ a {
   &--decor {
     padding: 11px 6px;
     background: #292929;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 10px 12px;
+    }
   }
 
   &__rows {
@@ -680,6 +708,12 @@ a {
   margin-left: 19%;
   background: #1E1E1E;
   box-shadow: -10px 0 34px rgb(0 0 0 / 50%);
+
+  @media (max-width: $breakpoint-lg) {
+    top: 63px;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .currencies {
@@ -712,14 +746,31 @@ a {
   &__text {
     width: 325px;
     margin: 0;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 168px;
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 
   &__btn {
     padding: 7px 11px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     background: #000000;
     border: none;
     border-radius: 5px;
     outline: none;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 9px 11px;
+      font-size: 8px;
+      line-height: 9px;
+    }
   }
 }
 
@@ -730,9 +781,18 @@ a {
   gap: 8px;
   margin-top: 24px;
 
+  @media (max-width: $breakpoint-lg) {
+    margin-top: 32px;
+  }
+
   &__prompt {
     color: rgb(255 255 255 / 40%);
     text-transform: none;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__dropdown {

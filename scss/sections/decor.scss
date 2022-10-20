@@ -1,18 +1,57 @@
 .decor {
   &__container {
     display: flex;
-    align-items: center;
     padding-top: 20px;
     padding-left: 60px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      row-gap: 6px;
+      width: 640px;
+      margin: 0 auto;
+      padding-top: 16px;
+      padding-bottom: 60px;
+      padding-left: 0;
+      column-gap: 16px;
+    }
+
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+
+  &__left {
+    @media (max-width: $breakpoint-lg) {
+      order: 2;
+      width: 312px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      order: 3;
+      width: 100%;
+      margin-top: 10px;
+    }
   }
 
   &__options {
     width: 520px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
   }
 
   &__dropdown {
     width: 220px;
     padding: 4px 6px 4px 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
   }
 
   &__slider {
@@ -76,19 +115,39 @@
     &--save {
       display: none;
     }
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      margin-left: 0;
+      padding: 14px 0;
+    }
   }
 
   &__right {
     display: flex;
     flex-direction: column;
     width: 514px;
+    margin-top: 10px;
     margin-left: 41px;
     padding: 22px 40px;
-    background-image: url(/assets/img/decor-bg.png);
+    background-image: url('/assets/img/decor-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #0D0D0D;
     border-radius: 4px;
+
+    @media (max-width: $breakpoint-lg) {
+      order: 3;
+      width: 312px;
+      margin-left: 0;
+      padding: 20px 22px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      order: 2;
+      width: 100%;
+      margin-top: 0;
+    }
   }
 
   &__result {
@@ -112,6 +171,13 @@
     display: flex;
     align-items: center;
     margin-top: 2px;
+
+
+    @media (max-width: $breakpoint-lg) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 8px;
+    }
   }
 
   &__promo-text {
@@ -130,12 +196,25 @@
     flex-direction: column;
     gap: 22px;
     margin-top: 16px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 12px;
+      margin-top: 12px;
+    }
   }
 
   &__delete {
     margin-left: 51px;
     color: $color-brand;
     cursor: pointer;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
 
     &:hover {
       color: #699827;
@@ -153,12 +232,41 @@
       width: 100%;
       padding: 11px 0;
       padding-left: 12px;
+
+      @media (max-width: $breakpoint-lg) {
+        font-size: 11px;
+        line-height: 16px;
+      }
     }
 
     button {
       position: absolute;
       right: 0;
       padding: 11px 22px;
+
+      @media (max-width: $breakpoint-lg) {
+        padding: 14px 22px;
+      }
+    }
+  }
+
+  &__close {
+    margin-top: 10px;
+    margin-left: 12px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      display: flex;
+      order: 1;
+      justify-content: flex-end;
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
     }
   }
 }
