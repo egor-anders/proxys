@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -63,16 +63,44 @@
   </header>
 
   <main id="main">
-    <section class="headline">
+    <section class="headline" style="display: none;">
       <div class="container">
-        <h1 class="headline__title">Высокоскоростные прокси</h1>
-        <p class="headline__descr body-text body-text--small">
+        <h1 class="headline__title headline__title--main">Высокоскоростные прокси</h1>
+        <p class="headline__descr body-text body-text--small headline__descr--main">
           Прокси для арбитража, СММ, СЕО и РРС деятельности
         </p>
       </div>
     </section>
 
-    <section class="filter">
+    <section class="problem">
+      <div class="container">
+        <div class="problem__headline">
+          <h2 class="problem__title">Сумма платежа меньше минимальной для данного способа оплаты</h2>
+          <p class="problem__descr body-text">
+            В агрегаторе Obmenka минимальный платеж <span>— 300 рублей</span> или по текущему курсу <span>— 4
+              USD</span>.
+          </p>
+        </div>
+        <ul class="problem__list">
+          <li class="problem__item problem__item--1">
+            <div class="problem__text">
+              <h4 class="problem__name subtitle">Пополнить баланс личного кабинета</h4>
+              <p class="problem__info body-text body-text--small">Пополните баланс и оплачивайте с него</p>
+            </div>
+            <button class="problem__btn button">пополнить</button>
+          </li>
+          <li class="problem__item problem__item--2">
+            <div class="problem__text">
+              <h4 class="problem__name subtitle">Выбрать другой агрегатор</h4>
+              <p class="problem__info body-text body-text--small">Произведите оплату с другого агрегатора</p>
+            </div>
+            <button class="problem__btn border-button">Вернуться к покупке</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="filter" style="display: none;">
       <div class="filter__container">
         <div class="filter__wrapper">
           <div class="filter__options">
@@ -190,7 +218,7 @@
       </div>
     </section>
 
-    <section class="content">
+    <section class="content" style="display: none;">
       <div class="container">
         <div class="content__header">
           <h2 class="content__title">Цена на прокси</h2>
@@ -641,7 +669,7 @@
       </div>
     </section>
 
-    <section class="decor popup">
+    <section class="decor popup" style="display: none;">
       <div class="decor__container">
         <h2 style="display: none">Оформление</h2>
 
@@ -805,11 +833,12 @@
           </div>
 
           <div class="stock decor__stock">
-            <p class="stock__text body-text body-text--small">Добавьте в корзину еще 50 прокси и сэкономьте 10 000 RUB</p>
+            <p class="stock__text body-text body-text--small">Добавьте в корзину еще 50 прокси и сэкономьте 10 000 RUB
+            </p>
             <button class="stock__btn">Добавить</button>
           </div>
 
-          
+
           <div class="decor__discount">
             <div class="decor__promo">
               <span class="body-text body-text--small decor__promo-text">Скидки</span>
@@ -842,7 +871,8 @@
             <div class="payment__check">
               <div class="check-box">
                 <input type="checkbox" name="payment-checkbox" id="payment-1">
-                <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия использования</span></label>
+                <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия
+                    использования</span></label>
               </div>
               <div class="payment__update body-text body-text--small">(обновлено от <span>29.05.2021</span>)</div>
             </div>
