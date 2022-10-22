@@ -388,6 +388,89 @@
         </div>
       </div>
     </section>
+
+    <section class="deposit popup popup--deposit">
+      <div class="deposit__container">
+        <div class="deposit__left">
+          <h3 class="deposit__title">Пополнить счет</h3>
+          <p class="deposit__message body-text body-text--small">Здесь Вы можете пополнить свой личный счет</p>
+
+          <p class="deposit__info body-text body-text--small body-text--color">
+            Пополнив баланс, Вы сможете оплачивать заказы, продлевать их, а так же в настройках включить функцию
+            автоматического продления указанного заказа
+          </p>
+
+          <div class="deposit__wrapper">
+            <span class="deposit__prompt body-text body-text--small body-text--color">Выберите валюту пополнения</span>
+            <ul class="deposit__tabs">
+              <li class="tab deposit__tab tab--active">rub</li>
+              <li class="tab deposit__tab">usd</li>
+              <li class="tab deposit__tab">eur</li>
+            </ul>
+          </div>
+
+          <div class="deposit__wrapper">
+            <span class="deposit__prompt body-text body-text--small body-text--color">Введите сумму пополонения</span>
+            <div class="deposit__input">
+              <input type="number" class="input" placeholder="21 320">
+              <span class="deposit__currency">RUB</span>
+            </div>
+          </div>
+        </div>
+        <div class="deposit__right">
+          <div class="deposit__result">
+            <h4 class="deposit__subtitle">Итого</h4>
+            <div class="deposit__rows">
+              <div class="buy-row deposit__row">
+                <p class="deposit__name body-text body-text--small">Сумма к зачислению на счет</p>
+                <p class="deposit__value body-text body-text--small">21 000 RUB</p>
+              </div>
+
+              <div class="buy-row deposit__row">
+                <p class="deposit__name body-text body-text--small">Примерная сумма в USD</p>
+                <p class="deposit__value body-text body-text--small">342 USD</p>
+              </div>
+
+              <div class="buy-row deposit__row">
+                <p class="deposit__name body-text body-text--small deposit__name--tooltip">Бонус <img src="/assets/img/icons/prompt.svg" alt=""></p>
+                <p class="deposit__value body-text body-text--small deposit__value--bonus">+ 1 321 RUB</p>
+              </div>
+            </div>
+          </div>
+          <div class="deposit__total">
+            <span class="body-text body-text--small">Итоговая сумма</span>
+            <h3 class="deposit__sum">22 321 RUB</h3>
+          </div>
+
+          <div class="payment deposit__payment">
+            <span class="text payment__prompt">Выберите способ оплаты</span>
+            <div class="payment__dropdown dropdown dropdown--payment">
+              <button id="dLabel-60" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Lava (Банковские карты РФ)</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu--payment" aria-labelledby="dLabel-60">
+                <li>Lava (Банковские карты РФ)</li>
+                <li>Lava (Банковские карты РФ) IPv4</li>
+                <li>Lava (Банковские карты РФ) IPv6</li>
+              </ul>
+            </div>
+            <button class="button payment__button">оформить</button>
+            <div class="payment__check">
+              <div class="check-box">
+                <input type="checkbox" name="payment-checkbox" id="payment-1">
+                <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия
+                    использования</span></label>
+              </div>
+              <div class="payment__update body-text body-text--small">(обновлено от <span>29.05.2021</span>)</div>
+            </div>
+          </div>
+        </div>
+        <div class="close deposit__close">
+          <img src="/assets/img/icons/close.svg" alt="">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
