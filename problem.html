@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="http://fonts.cdnfonts.com/css/arial" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <title>proxys.io</title>
+</head>
+
+<body id="body">
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <a href="#" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
+        <button class="button header__btn">Купить</button>
+        <ul class="header__list">
+          <li><a href="#" class="header__link">цены</a></li>
+          <li><a href="#" class="header__link">контакты</a></li>
+          <li><a href="#" class="header__link">faq</a></li>
+          <li><a href="#" class="header__link">блог</a></li>
+          <li><a href="#" class="header__link">прокси-чекер</a></li>
+          <li class="dropdown">
+            <button id="dLabel-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="header__flag" alt="" src="/assets/img/icons/russia.svg">
+              <span>RU</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel-1">
+              <li class="active"><img class="header__flag" alt="" src="/assets/img/icons/russia.svg">RU</li>
+              <li><img class="header__flag" alt="" src="/assets/img/icons/eng.svg">EN</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header__right">
+          <div class="header__item header__item--walet">
+            <div class="header__icon"><img src="/assets/img/icons/wallet.svg" alt=""></div>
+            <span class="header__text">132 000 RUB</span>
+            <span class="caret"></span>
+          </div>
+          <div class="header__item">
+            <div class="header__icon"><img src="/assets/img/icons/profile.svg" alt=""></div>
+            <span class="header__text">Вход</span>
+            <span class="caret"></span>
+          </div>
+          <div class="header__item header__item--cart">
+            <div class="header__icon"><img src="/assets/img/icons/cart.svg" alt=""></div>
+            <span class="header__text">5 110 RUB</span>
+          </div>
+          <div class="header__menu-btn"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="problem">
+      <div class="container">
+        <div class="problem__headline">
+          <h2 class="problem__title">Сумма платежа меньше минимальной для данного способа оплаты</h2>
+          <p class="problem__descr body-text">
+            В агрегаторе Obmenka минимальный платеж <span>— 300 рублей</span> или по текущему курсу <span>— 4
+              USD</span>.
+          </p>
+        </div>
+        <ul class="problem__list">
+          <li class="problem__item problem__item--1">
+            <div class="problem__text">
+              <h4 class="problem__name subtitle">Пополнить баланс личного кабинета</h4>
+              <p class="problem__info body-text body-text--small">Пополните баланс и оплачивайте с него</p>
+            </div>
+            <button class="problem__btn button">пополнить</button>
+          </li>
+          <li class="problem__item problem__item--2">
+            <div class="problem__text">
+              <h4 class="problem__name subtitle">Выбрать другой агрегатор</h4>
+              <p class="problem__info body-text body-text--small">Произведите оплату с другого агрегатора</p>
+            </div>
+            <button class="problem__btn border-button">Вернуться к покупке</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__info">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Условия использования</a>
+        </div>
+        <div class="footer__social">
+          <a href="#" class="footer__link">
+            <img class="footer__icon" src="/assets/img/icons/vk.svg" alt="">
+            <span>вконтакте</span>
+          </a>
+          <a href="mailto:mail@proxys.io" class="footer__link">
+            <img class="footer__icon" src="/assets/img/icons/mail.svg" alt="">
+            <span>mail@proxys.io</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <a href="#" class="footer__adv"><img src="/assets/img/banner.png" alt=""></a>
+        <p class="footer__copyright">© Copyright 2016 - 2022 Proxys.io</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"
+    integrity="sha512-SFaNb3xC08k/Wf6CRM1J+O/vv4YWyrPBSdy0o+1nqKzf+uLrIBnaeo8aYoAAOd31nMNHwX8zwVwTMbbCJjA8Kg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

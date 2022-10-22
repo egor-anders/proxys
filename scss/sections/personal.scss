@@ -1,0 +1,179 @@
+.personal {
+  padding: 30px 0 130px;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 44px 0 50px;
+  }
+
+  &__dropdown {
+    display: none;
+
+    @media (max-width: $breakpoint-lg) {
+      display: flex;
+      padding: 11px 12px 11px 16px;
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+
+      &--mobile {
+        display: flex;
+        width: 100%;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 17px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 312px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__wallet {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 300px;
+    padding: 20px 0 20px 24px;
+    background: #1E1E1E;
+    border: 1px solid #090909;
+    border-radius: 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 14px;
+      width: 312px;
+      padding: 16px 0 16px 22px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 8px;
+
+      span {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &__balance {
+    margin: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 24px;
+    }
+  }
+
+  &__button {
+    color: $color-brand;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 8px;
+      line-height: 9px;
+    }
+
+    &:hover {
+      color: #699827;
+    }
+
+    &:active {
+      color: #57742E;
+    }
+  }
+
+  &__filters {
+    width: 100%;
+    padding: 18px 0;
+    background: #292929;
+    box-shadow: 0 4px 74px rgb(0 0 0 / 20%);
+
+
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 100%;
+    height: 556px;
+    margin-top: 20px;
+    background: #1E1E1E;
+    border: 1px solid #090909;
+    border-radius: 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 0;
+    }
+  }
+}
