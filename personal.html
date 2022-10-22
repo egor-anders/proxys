@@ -63,17 +63,47 @@
   </header>
 
   <main id="main">
-   <section class="personal">
-    <div class="container">
-      <div class="personal__header">
-        <div class="personal__left">
-          <h2 class="personal__title">Личный кабинет</h2>
-          <div class="personal__dropdown dropdown dropdown--filter">
-            <button id="dLabel-50" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <section class="personal">
+      <div class="container">
+        <div class="personal__header">
+          <div class="personal__left">
+            <h2 class="personal__title">Личный кабинет</h2>
+            <div class="personal__dropdown dropdown dropdown--filter">
+              <button id="dLabel-50" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Заказы</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dLabel-50">
+                <li>Заказы на мобильные прокси</li>
+                <li>Общий список прокси</li>
+                <li>Удаление из заказов</li>
+                <li>Аккаунт</li>
+                <li>Партнерская программа </li>
+                <li>Партнеры</li>
+                <li>Ключи API</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="personal__wallet">
+            <div class="personal__text">
+              <span class="body-text body-text--small body-text--color">Баланс</span>
+              <h3 class="personal__balance">512 110 RUB</h3>
+            </div>
+            <ul class="personal__buttons">
+              <li class="personal__button">Пополнить</li>
+              <li class="personal__button">Автопродление</li>
+              <li class="personal__button">История</li>
+            </ul>
+          </div>
+
+          <div class="personal__dropdown dropdown dropdown--filter personal__dropdown--mobile">
+            <button id="dLabel-51" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Заказы</span>
               <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel-50">
+            <ul class="dropdown-menu" aria-labelledby="dLabel-51">
               <li>Заказы на мобильные прокси</li>
               <li>Общий список прокси</li>
               <li>Удаление из заказов</li>
@@ -83,56 +113,281 @@
               <li>Ключи API</li>
             </ul>
           </div>
-
         </div>
-        
-        <div class="personal__wallet">
-          <div class="personal__text">
-            <span class="body-text body-text--small body-text--color">Баланс</span>
-            <h3 class="personal__balance">512 110 RUB</h3>
-          </div>
-          <ul class="personal__buttons">
-            <li class="personal__button">Пополнить</li>
-            <li class="personal__button">Автопродление</li>
-            <li class="personal__button">История</li>
-          </ul>
-        </div>
-
-        <div class="personal__dropdown dropdown dropdown--filter personal__dropdown--mobile">
-          <button id="dLabel-51" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span>Заказы</span>
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dLabel-51">
-            <li>Заказы на мобильные прокси</li>
-            <li>Общий список прокси</li>
-            <li>Удаление из заказов</li>
-            <li>Аккаунт</li>
-            <li>Партнерская программа </li>
-            <li>Партнеры</li>
-            <li>Ключи API</li>
+      </div>
+      <div class="personal__filters">
+        <div class="container">
+          <ul class="personal__list">
+            <li class="personal__item">Заказы</li>
+            <li class="personal__item">Заказы на мобильные прокси</li>
+            <li class="personal__item">Общий список прокси</li>
+            <li class="personal__item">Удаление из заказов</li>
+            <li class="personal__item">Аккаунт</li>
+            <li class="personal__item">Партнерская программа </li>
+            <li class="personal__item">Партнеры</li>
+            <li class="personal__item">Ключи API</li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="personal__filters">
       <div class="container">
-        <ul class="personal__list">
-          <li class="personal__item">Заказы</li>
-          <li class="personal__item">Заказы на мобильные прокси</li>
-          <li class="personal__item">Общий список прокси</li>
-          <li class="personal__item">Удаление из заказов</li>
-          <li class="personal__item">Аккаунт</li>
-          <li class="personal__item">Партнерская программа </li>
-          <li class="personal__item">Партнеры</li>
-          <li class="personal__item">Ключи API</li>
-        </ul>
+        <div class="personal__content"></div>
       </div>
-    </div>
-    <div class="container">
-      <div class="personal__content"></div>
-    </div>
-   </section>
+    </section>
+
+    <section class="history popup popup--history">
+      <div class="history__container">
+        <div class="history__header">
+          <h3 class="history__title">История баланса</h3>
+          <div class="history__close close">
+            <img src="/assets/img/icons/close.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="history__exist">
+        <div class="history__wrapper">
+          <div class="history__tabs">
+            <div class="history__tab tab tab--active">Все</div>
+            <div class="history__tab tab">пополнение</div>
+            <div class="history__tab tab">покупка</div>
+            <div class="history__tab tab">Автопродление</div>
+          </div>
+        </div>
+        <div class="history__container">
+          <div class="history__rows">
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Автоматическое продление заказа №123241144</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Автоматическое продление заказа №123241144</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Оплата заказа №112345476</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Оплата заказа №112345476</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Оплата заказа №112345476</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row history__row--payment buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Оплата заказа №112345476</span>
+              </p>
+              <div class="history__total text">- 299 219 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+            <div class="history__row buy-row">
+              <p class="history__info">
+                <span class="history__date">22.07.2022</span>
+                <span class="history__time">06:56:12</span>
+                <span class="history__divider">—</span>
+                <span class="history__operation">Пополение счета</span>
+              </p>
+              <div class="history__total text">+ 21 223 RUB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="history__null">
+        <div class="history__container">
+          <span class="history__message">История не найдена</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
