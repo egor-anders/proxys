@@ -152,6 +152,7 @@
     margin-right: 13px;
     margin-left: auto;
     padding: 22px 40px;
+    background-color: #292929;
     background-image: url('/assets/img/decor-bg.png');
     border: 1px solid #000000;
     border-radius: 4px;
@@ -195,6 +196,7 @@
   }
 
   &__row {
+    position: relative;
     padding: 10px 0 10px 16px;
     background: transparent;
     background: #1D1D1D;
@@ -224,11 +226,54 @@
     }
 
     &--tooltip {
-      img {
-        margin-left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 7px 12px;
+
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: 70px;
+      width: 0;
+      height: 0;
+      border-width: 0 6.5px 6px;
+      border-style: solid;
+      border-color: transparent transparent #C98833;
+      content: '';
+
+      @media (max-width: $breakpoint-lg) {
+        left: 55px;
       }
     }
   }
+
+  &__help {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_588_26365)'%3E%3Cpath opacity='0.4' d='M23 11.9998C23 17.5238 18.523 21.9998 13 21.9998C7.477 21.9998 3 17.5238 3 11.9998C3 6.47776 7.477 1.99976 13 1.99976C18.523 1.99976 23 6.47776 23 11.9998Z' fill='%23343434'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.8711 12.6307C13.8711 13.1127 13.4781 13.5057 12.9961 13.5057C12.5141 13.5057 12.1211 13.1127 12.1211 12.6307V8.21069C12.1211 7.72869 12.5141 7.33569 12.9961 7.33569C13.4781 7.33569 13.8711 7.72869 13.8711 8.21069V12.6307ZM12.1261 15.8035C12.1261 15.3215 12.5171 14.9285 12.9961 14.9285C13.4891 14.9285 13.8811 15.3215 13.8811 15.8035C13.8811 16.2855 13.4891 16.6785 13.0061 16.6785C12.5211 16.6785 12.1261 16.2855 12.1261 15.8035Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_588_26365' x='-2' y='-2' width='30' height='30' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='1'/%3E%3CfeGaussianBlur stdDeviation='1.5'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_588_26365'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_588_26365' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: contain;
+    cursor: pointer;
+
+
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.4'%3E%3Cpath d='M22 11.9998C22 17.5238 17.523 21.9998 12 21.9998C6.477 21.9998 2 17.5238 2 11.9998C2 6.47776 6.477 1.99976 12 1.99976C17.523 1.99976 22 6.47776 22 11.9998' fill='%23343434'/%3E%3Cpath d='M22 11.9998C22 17.5238 17.523 21.9998 12 21.9998C6.477 21.9998 2 17.5238 2 11.9998C2 6.47776 6.477 1.99976 12 1.99976C17.523 1.99976 22 6.47776 22 11.9998' stroke='%23C98933'/%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8711 12.6307C12.8711 13.1127 12.4781 13.5057 11.9961 13.5057C11.5141 13.5057 11.1211 13.1127 11.1211 12.6307V8.21069C11.1211 7.72869 11.5141 7.33569 11.9961 7.33569C12.4781 7.33569 12.8711 7.72869 12.8711 8.21069V12.6307ZM11.1261 15.8035C11.1261 15.3215 11.5171 14.9285 11.9961 14.9285C12.4891 14.9285 12.8811 15.3215 12.8811 15.8035C12.8811 16.2855 12.4891 16.6785 12.0061 16.6785C11.5211 16.6785 11.1261 16.2855 11.1261 15.8035Z' fill='%23C98933'/%3E%3C/svg%3E%0A");
+
+      & ~ .deposit__tooltip {
+        display: flex;
+      }
+    }
+  }
+
 
   &__value {
     width: 38%;
@@ -264,6 +309,11 @@
 
   &__sum {
     margin: 0;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 
   &__payment {

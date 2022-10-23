@@ -432,7 +432,11 @@
               </div>
 
               <div class="buy-row deposit__row">
-                <p class="deposit__name body-text body-text--small deposit__name--tooltip">Бонус <img src="/assets/img/icons/prompt.svg" alt=""></p>
+                <div class="deposit__name deposit__name--tooltip">
+                  <span class="deposit__name body-text body-text--small">Бонус</span>
+                  <div class="deposit__help"></div>
+                  <div class="deposit__tooltip tooltip">Текст с описанием акции и ее сроки</div>
+                </div>
                 <p class="deposit__value body-text body-text--small deposit__value--bonus">+ 1 321 RUB</p>
               </div>
             </div>
@@ -455,7 +459,7 @@
                 <li>Lava (Банковские карты РФ) IPv6</li>
               </ul>
             </div>
-            <button class="button payment__button">оформить</button>
+            <button class="button payment__button" data-toggle="modal" data-target="#basicModal">пополнить счёт</button>
             <div class="payment__check">
               <div class="check-box">
                 <input type="checkbox" name="payment-checkbox" id="payment-1">
@@ -471,6 +475,28 @@
         </div>
       </div>
     </section>
+
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal__top">
+            <div class="modal__icon"><img src="/assets/img/icons/tick.svg" alt=""></div>
+            <div class="modal__main">
+              <h3 class="modal__title">Ваш баланс пополнен</h3>
+              <p class="modal__result body-text">Сумма пополнения <span>+</span> <span>21 321</span> <span>RUB</span>
+              </p>
+            </div>
+          </div>
+          <div class="modal__info">
+            <p class="modal__message body-text body-text--small body-text--color">Вы можете вернуться в корзину
+              и оплатить Ваш заказ</p>
+            <button class="button modal__button">вернуться в корзину</button>
+          </div>
+        </div>
+        <div class="modal__close close" data-dismiss="modal"><img src="/assets//img/icons/close.svg" alt=""></div>
+      </div>
+    </div>
+    </div>
   </main>
 
   <footer class="footer">
