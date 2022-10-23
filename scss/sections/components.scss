@@ -309,6 +309,7 @@ a {
   img {
     width: 16px;
     height: 16px;
+    border-radius: 5px;
   }
 }
 
@@ -707,6 +708,7 @@ a {
   position: absolute;
   top: 81px;
   left: 0;
+  display: none;
   width: 81%;
   min-height: 100vh;
   margin-left: 19%;
@@ -979,6 +981,10 @@ a {
       min-height: 239px;
       padding: 22px;
     }
+
+    @media (max-width: 359px) {
+      width: 100%;
+    }
   }
 
   &__icon {
@@ -1043,9 +1049,9 @@ a {
     margin-left: calc(64px + 25px);
 
     @media (max-width: $breakpoint-lg) {
+      gap: 16px;
       width: 100%;
       margin-left: 0;
-      gap: 16px;
     }
   }
 

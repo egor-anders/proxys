@@ -2,6 +2,7 @@
 @import 'variables.scss';
 @import 'sections/components.scss';
 @import 'sections/header.scss';
+@import 'sections/menu.scss';
 @import 'sections/headline.scss';
 @import 'sections/filter.scss';
 @import 'sections/content.scss';
@@ -25,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #272727;
+  background-color: #202020;
   background-image: url('/assets/img/bg.svg');
   background-size: cover;
 }
@@ -35,4 +36,12 @@ body {
   grid-template-rows: auto 1fr auto;
   box-sizing: border-box;
   min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
 }
