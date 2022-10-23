@@ -24,6 +24,14 @@
     }
   }
 
+
+  &__extra {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   &__header {
     display: flex;
     flex-wrap: wrap;
