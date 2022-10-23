@@ -11,6 +11,7 @@
 @import 'sections/personal.scss';
 @import 'sections/history.scss';
 @import 'sections/deposit.scss';
+@import 'sections/autorenewal.scss';
 @import 'sections/footer.scss';
 
 
@@ -26,6 +27,8 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -33,8 +36,6 @@ body {
   background-color: #202020;
   background-image: url('/assets/img/bg.svg');
   background-size: cover;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 
 .wrapper {

@@ -245,96 +245,6 @@
   </header>
 
   <main id="main">
-
-    <div class="container" style="position: relative; margin-top: -88px;">
-      <section class="deposit popup popup--deposit">
-        <div class="deposit__container">
-          <div class="deposit__left">
-            <h3 class="deposit__title">Пополнить счет</h3>
-            <p class="deposit__message body-text body-text--small">Здесь Вы можете пополнить свой личный счет</p>
-
-            <p class="deposit__info body-text body-text--small body-text--color">
-              Пополнив баланс, Вы сможете оплачивать заказы, продлевать их, а так же в настройках включить функцию
-              автоматического продления указанного заказа
-            </p>
-
-            <div class="deposit__wrapper">
-              <span class="deposit__prompt body-text body-text--small body-text--color">Выберите валюту пополнения</span>
-              <ul class="deposit__tabs">
-                <li class="tab deposit__tab tab--active">rub</li>
-                <li class="tab deposit__tab">usd</li>
-                <li class="tab deposit__tab">eur</li>
-              </ul>
-            </div>
-
-            <div class="deposit__wrapper">
-              <span class="deposit__prompt body-text body-text--small body-text--color">Введите сумму пополонения</span>
-              <div class="deposit__input">
-                <input type="number" class="input" placeholder="21 320">
-                <span class="deposit__currency">RUB</span>
-              </div>
-            </div>
-          </div>
-          <div class="deposit__right">
-            <div class="deposit__result">
-              <h4 class="deposit__subtitle">Итого</h4>
-              <div class="deposit__rows">
-                <div class="buy-row deposit__row">
-                  <p class="deposit__name body-text body-text--small">Сумма к зачислению на счет</p>
-                  <p class="deposit__value body-text body-text--small">21 000 RUB</p>
-                </div>
-
-                <div class="buy-row deposit__row">
-                  <p class="deposit__name body-text body-text--small">Примерная сумма в USD</p>
-                  <p class="deposit__value body-text body-text--small">342 USD</p>
-                </div>
-
-                <div class="buy-row deposit__row">
-                  <div class="deposit__name deposit__name--tooltip">
-                    <span class="deposit__name body-text body-text--small">Бонус</span>
-                    <div class="deposit__help"></div>
-                    <div class="deposit__tooltip tooltip">Текст с описанием акции и ее сроки</div>
-                  </div>
-                  <p class="deposit__value body-text body-text--small deposit__value--bonus">+ 1 321 RUB</p>
-                </div>
-              </div>
-            </div>
-            <div class="deposit__total">
-              <span class="body-text body-text--small">Итоговая сумма</span>
-              <h3 class="deposit__sum">22 321 RUB</h3>
-            </div>
-
-            <div class="payment deposit__payment">
-              <span class="text payment__prompt">Выберите способ оплаты</span>
-              <div class="payment__dropdown dropdown dropdown--payment">
-                <button id="dLabel-60" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span>Lava (Банковские карты РФ)</span>
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu--payment" aria-labelledby="dLabel-60">
-                  <li>Lava (Банковские карты РФ)</li>
-                  <li>Lava (Банковские карты РФ) IPv4</li>
-                  <li>Lava (Банковские карты РФ) IPv6</li>
-                </ul>
-              </div>
-              <button class="button payment__button" data-toggle="modal" data-target="#basicModal">пополнить счёт</button>
-              <div class="payment__check">
-                <div class="check-box">
-                  <input type="checkbox" name="payment-checkbox" id="payment-1">
-                  <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия
-                      использования</span></label>
-                </div>
-                <div class="payment__update body-text body-text--small">(обновлено от <span>29.05.2021</span>)</div>
-              </div>
-            </div>
-          </div>
-          <div class="close deposit__close">
-            <img src="/assets/img/icons/close.svg" alt="">
-          </div>
-        </div>
-      </section>
-    </div>
-
     <section class="personal">
       <div class="container">
         <div class="personal__header">
@@ -661,8 +571,448 @@
       </div>
     </section>
 
-    
-    
+    <section class="deposit popup popup--deposit">
+      <div class="deposit__container">
+        <div class="deposit__left">
+          <h3 class="deposit__title">Пополнить счет</h3>
+          <p class="deposit__message body-text body-text--small">Здесь Вы можете пополнить свой личный счет</p>
+
+          <p class="deposit__info body-text body-text--small body-text--color">
+            Пополнив баланс, Вы сможете оплачивать заказы, продлевать их, а так же в настройках включить функцию
+            автоматического продления указанного заказа
+          </p>
+
+          <div class="deposit__wrapper">
+            <span class="deposit__prompt body-text body-text--small body-text--color">Выберите валюту пополнения</span>
+            <ul class="deposit__tabs">
+              <li class="tab deposit__tab tab--active">rub</li>
+              <li class="tab deposit__tab">usd</li>
+              <li class="tab deposit__tab">eur</li>
+            </ul>
+          </div>
+
+          <div class="deposit__wrapper">
+            <span class="deposit__prompt body-text body-text--small body-text--color">Введите сумму пополонения</span>
+            <div class="deposit__input">
+              <input type="number" class="input" placeholder="21 320">
+              <span class="deposit__currency">RUB</span>
+            </div>
+          </div>
+        </div>
+        <div class="deposit__right">
+          <div class="deposit__result">
+            <h4 class="deposit__subtitle">Итого</h4>
+            <div class="deposit__rows">
+              <div class="buy-row deposit__row">
+                <p class="deposit__name body-text body-text--small">Сумма к зачислению на счет</p>
+                <p class="deposit__value body-text body-text--small">21 000 RUB</p>
+              </div>
+
+              <div class="buy-row deposit__row">
+                <p class="deposit__name body-text body-text--small">Примерная сумма в USD</p>
+                <p class="deposit__value body-text body-text--small">342 USD</p>
+              </div>
+
+              <div class="buy-row deposit__row">
+                <div class="deposit__name deposit__name--tooltip">
+                  <span class="deposit__name body-text body-text--small">Бонус</span>
+                  <div class="deposit__help"></div>
+                  <div class="deposit__tooltip tooltip">Текст с описанием акции и ее сроки</div>
+                </div>
+                <p class="deposit__value body-text body-text--small deposit__value--bonus">+ 1 321 RUB</p>
+              </div>
+            </div>
+          </div>
+          <div class="deposit__total">
+            <span class="body-text body-text--small">Итоговая сумма</span>
+            <h3 class="deposit__sum">22 321 RUB</h3>
+          </div>
+
+          <div class="payment deposit__payment">
+            <span class="text payment__prompt">Выберите способ оплаты</span>
+            <div class="payment__dropdown dropdown dropdown--payment">
+              <button id="dLabel-60" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Lava (Банковские карты РФ)</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu--payment" aria-labelledby="dLabel-60">
+                <li>Lava (Банковские карты РФ)</li>
+                <li>Lava (Банковские карты РФ) IPv4</li>
+                <li>Lava (Банковские карты РФ) IPv6</li>
+              </ul>
+            </div>
+            <button class="button payment__button" data-toggle="modal" data-target="#basicModal">пополнить счёт</button>
+            <div class="payment__check">
+              <div class="check-box">
+                <input type="checkbox" name="payment-checkbox" id="payment-1">
+                <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия
+                    использования</span></label>
+              </div>
+              <div class="payment__update body-text body-text--small">(обновлено от <span>29.05.2021</span>)</div>
+            </div>
+          </div>
+        </div>
+        <div class="close deposit__close">
+          <img src="/assets/img/icons/close.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="autorenewal popup">
+      <div class="autorenewal__container">
+        <div class="autorenewal__header">
+          <div class="autorenewal__left">
+            <h3 class="autorenewal__title">Автопродление заказов</h3>
+            <p class="autorenewal__descr body-text body-text--small body-text--color">Отметьте заказы, которые вы хотите атоматически продлить</p>
+          </div>
+          <p class="autorenewal__warning body-text body-text--small">Атопродление заказа возможно в случае, если на Вашем балансе имеется необходимая сумма</p>
+          <div class="close autorenewal__close">
+            <img src="/assets/img/icons/close.svg" alt="">
+          </div>
+        </div>
+        <div class="autorenewal__main">
+          <div class="autorenewal__table">
+            <ul class="autorenewal__captions">
+              <li class="autorenewal__caption"></li>
+              <li class="autorenewal__caption">Номер заказа</li>
+              <li class="autorenewal__caption">Дата оформления</li>
+              <li class="autorenewal__caption">Прокси</li>
+              <li class="autorenewal__caption">Кол-во IP</li>
+              <li class="autorenewal__caption">Цена</li>
+            </ul>
+            <div class="autorenewal__rows">
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-1" id="check-1" checked>
+                  <label for="check-1" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-2" id="check-2" checked>
+                  <label for="check-2" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-3" id="check-3" checked>
+                  <label for="check-3" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-4" id="check-4">
+                  <label for="check-4" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-5" id="check-5">
+                  <label for="check-5" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-6" id="check-6">
+                  <label for="check-6" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-7" id="check-7">
+                  <label for="check-7" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-8" id="check-8">
+                  <label for="check-8" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-9" id="check-9">
+                  <label for="check-9" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-10" id="check-10">
+                  <label for="check-10" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-11" id="check-11">
+                  <label for="check-11" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-12" id="check-12">
+                  <label for="check-12" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-13" id="check-13">
+                  <label for="check-13" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-14" id="check-14">
+                  <label for="check-14" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-15" id="check-15">
+                  <label for="check-15" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-16" id="check-16">
+                  <label for="check-16" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-17" id="check-17">
+                  <label for="check-17" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+              <div class="autorenewal__row">
+                <div class="check-box">
+                  <input type="checkbox" name="check-18" id="check-18">
+                  <label for="check-18" class=""></span></label>
+                </div>
+                <span class="autorenewal__item body-text body-text--small autorenewal__order">№1223553221</span>
+
+                <p class="autorenewal__info autorenewal__item">
+                  <span class="autorenewal__item body-text body-text--small autorenewal__date">22.07.2022</span> 
+                  <span class="autorenewal__item body-text body-text--small autorenewal__time">06:56:12</span>
+                </p>
+                <span class="autorenewal__item body-text body-text--small autorenewal__proxy">Индивидуальные IPV4</span>
+                <span class="autorenewal__item body-text body-text--small autorenewal__count">50</span>
+                <p class="autorenewal__price autorenewal__item">
+                  <span class="autorenewal__value autorenewal__item body-text body-text--small" >120 331</span>
+                  <span class="autorenewal__currency autorenewal__item body-text body-text--small" >RUB</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="button autorenewal__button">сохранить</button>
+        </div>
+      </div>
+    </section>
+
     <div class="modal modal--1 fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal"
       aria-hidden="true">
       <div class="modal-dialog">
