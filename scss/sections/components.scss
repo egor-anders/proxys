@@ -709,9 +709,9 @@ a {
   top: 81px;
   left: 0;
   display: none;
-  width: 81%;
-  min-height: 100vh;
-  margin-left: 19%;
+  min-height: calc(100vh - 80px);
+  overflow-x: hidden;
+  width: 100vw;
   background: #1E1E1E;
   box-shadow: -10px 0 34px rgb(0 0 0 / 50%);
 
