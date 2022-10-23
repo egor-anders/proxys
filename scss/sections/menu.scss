@@ -1,10 +1,15 @@
 .menu {
   position: absolute;
   top: 81px;
+  display: none;
   width: 100%;
   padding: 40px 0 50px;
   background: #1E1E1E;
   box-shadow: 0 4px 32px rgb(0 0 0 / 40%);
+
+  &--open {
+    display: block;
+  }
 
   @media (max-width: $breakpoint-lg) {
     top: 64px;
