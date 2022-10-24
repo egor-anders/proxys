@@ -56,13 +56,15 @@
 
   &__slider {
     &--fixed {
+      padding-bottom: 1px;
+
       input[type='range'] {
         display: none;
       }
 
       input[type='number'] {
         background: transparent;
-        border: none;
+        border: 1px solid transparent;
         box-shadow: none;
         pointer-events: none;
       }

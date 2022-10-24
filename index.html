@@ -21,7 +21,7 @@
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <a href="#" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
+        <a href="index.html" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
         <button class="button header__btn">Купить</button>
         <ul class="header__list">
           <li><a href="#" class="header__link">цены</a></li>
@@ -47,11 +47,11 @@
             <span class="header__text">132 000 RUB</span>
             <span class="caret"></span>
           </div>
-          <div class="header__item">
+          <a href="personal.html" class="header__item">
             <div class="header__icon"><img src="/assets/img/icons/profile.svg" alt=""></div>
             <span class="header__text">Вход</span>
             <span class="caret"></span>
-          </div>
+          </a>
           <div data-cart class="header__item header__item--cart">
             <div class="header__icon"><img src="/assets/img/icons/cart.svg" alt=""></div>
             <span class="header__text">5 110 RUB</span>
@@ -385,7 +385,8 @@
         </div>
 
         <div class="content__filters">
-          <div data-content="individual" class="content__filter tab">Индивидуальные IPV4 <span class="marker marker--hit">хит
+          <div data-content="individual" class="content__filter tab">Индивидуальные IPV4 <span
+              class="marker marker--hit">хит
               продаж</span></div>
           <div class="content__filter tab">Шареды (расшаренные) <span class="popular">популярное</span></div>
           <div data-content="mobile" class="content__filter tab tab--active">Мобильные</div>
@@ -536,7 +537,7 @@
               </div>
             </div>
             <div class="content__options">
-              <div class="buy-row buy-row--color buy-row--border">
+              <div class="buy-row buy-row--color buy-row--border content__tooltip-wrapper">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
                 <div class="content__slider">
                   <input type="number" class="input content__slider-text" value="50" min="1" max="200">
@@ -545,6 +546,10 @@
                     <span>1</span>
                     <span>200</span>
                   </div>
+                </div>
+                <div class="tooltip content__tooltip content__tooltip--individual">
+                  <span>Добавьте в корзину еще 50 прокси и сэкономьте 10 000 RUB</span>
+                  <button data-hide="individual" class="stock__btn">добавить</button>
                 </div>
               </div>
               <div class="buy-row">
@@ -671,7 +676,7 @@
 
               <div class="content__buttons">
                 <button class="border-button content__button content__button--cart">добавить в корзину</button>
-                <button class="button content__button content__button--buy">купить</button>
+                <button data-cart class="button content__button content__button--buy">купить</button>
               </div>
             </div>
           </div>
@@ -818,11 +823,14 @@
               </div>
             </div>
 
-            <div class="content__footer">
+            <div class="content__footer content__footer--mobile">
               <div class="content__result result">
                 <h2 class="content__all result__all">5 100 RUB</h2>
                 <span class="content__unit result__unit text">2 555 RUB за шт.</span>
               </div>
+
+              <div class="content__tooltip tooltip content__tooltip--mobile"><span>Добавьте в корзину еще 50 прокси и
+                  сэкономьте 10 000 RUB</span> <button data-hide="mobile" class="stock__btn">Понятно</button></div>
 
               <div class="content__buttons">
                 <button class="border-button content__button content__button--cart">добавить в корзину</button>

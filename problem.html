@@ -21,7 +21,7 @@
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <a href="#" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
+        <a href="index.html" class="header__logo"><img src="/assets/img/logo.png" alt="" /></a>
         <button class="button header__btn">Купить</button>
         <ul class="header__list">
           <li><a href="#" class="header__link">цены</a></li>
@@ -47,12 +47,12 @@
             <span class="header__text">132 000 RUB</span>
             <span class="caret"></span>
           </div>
-          <div class="header__item">
+          <a href="personal.html" class="header__item">
             <div class="header__icon"><img src="/assets/img/icons/profile.svg" alt=""></div>
             <span class="header__text">Вход</span>
             <span class="caret"></span>
-          </div>
-          <div class="header__item header__item--cart">
+          </a>
+          <div data-cart class="header__item header__item--cart">
             <div class="header__icon"><img src="/assets/img/icons/cart.svg" alt=""></div>
             <span class="header__text">5 110 RUB</span>
           </div>
@@ -71,7 +71,7 @@
               <span class="header__text">132 000 RUB</span>
               <span class="caret"></span>
             </div>
-            <div class="header__item header__item--cart-1">
+            <div data-cart class="header__item header__item--cart-1">
               <div class="header__icon"><img src="/assets/img/icons/cart.svg" alt=""></div>
               <span class="header__text">5 110 RUB</span>
             </div>
@@ -270,6 +270,223 @@
             <button class="problem__btn border-button">Вернуться к покупке</button>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="decor popup popup--decor">
+      <div class="decor__container">
+        <h2 style="display: none">Оформление</h2>
+
+
+        <div class="decor__left">
+          <div class="decor__options additionally additionally--decor">
+            <div class="decor__additionally-header additionally__header additionally__header--decor">
+              <h4 class="decor__additionally-title text additionally__title">Шареды (расшаренные)</h4>
+              <div class="country"><img src="/assets/img/icons/flags/germany.svg" alt=""> <span>Германия</span></div>
+              <div class="caret caret--additionally caret--close"></div>
+            </div>
+          </div>
+
+          <div class="decor__options additionally additionally--decor">
+            <div class="decor__additionally-header additionally__header additionally__header--decor">
+              <h4 class="decor__additionally-title text additionally__title additionally__title--active">Индивидуальные
+                IPV4</h4>
+              <div class="caret caret--additionally"></div>
+            </div>
+            <div class="additionally__rows decor__rows">
+              <div class="buy-row buy-row--border buy-row--additionally buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Страна</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-30" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span class="country"><img src="/assets//img/icons/flags/russia.svg"
+                        alt=""><span>Россия</span></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-30">
+                    <li>не выбрано</li>
+                    <li>не выбрано</li>
+                    <li>не выбрано</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--additionally  buy-row--transparent buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Период аренды</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-31" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span>30 дней</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-31">
+                    <li>30 дней</li>
+                    <li>30 дней</li>
+                    <li>30 дней</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--border buy-row--additionally buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Количество IP адрессов</div>
+                <div class="decor__slider decor__slider--fixed">
+                  <input type="number" class="input decor__slider-text" value="16" min="1" max="200">
+                  <input type="range" class="decor__range" value="50" min="1" max="200" step="1">
+                </div>
+              </div>
+              <div class="buy-row buy-row--additionally  buy-row--transparent buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">pOSf - отпечаток</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-32" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span>Windows</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-32">
+                    <li>Windows</li>
+                    <li>Windows</li>
+                    <li>Windows</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--border buy-row--additionally buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Скорость</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-33" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span>Москва</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-33">
+                    <li>Скорость</li>
+                    <li>Скорость</li>
+                    <li>Скорость</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--additionally  buy-row--transparent buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Трафик</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-34" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span>Безлимитный</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-34">
+                    <li>Безлимитный</li>
+                    <li>Безлимитный</li>
+                    <li>Безлимитный</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--border buy-row--additionally buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Количество подсетей в заказе</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-35" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span>1</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-35">
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="buy-row buy-row--additionally  buy-row--transparent buy-row--decor">
+                <div class="body-text body-text--small decor__prompt">Город</div>
+                <div class="decor__dropdown dropdown dropdown--filter dropdown--fixed">
+                  <button id="dLabel-36" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <span class="country"><img src="/assets/img/icons/flags/russia.svg" alt="">
+                      <span>Москва</span></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel-36">
+                    <li>Москва</li>
+                    <li>Москва</li>
+                    <li>Москва</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="decor__line"></div>
+              <button class="button decor__btn decor__btn--edit">редактировать</button>
+              <button class="button decor__btn decor__btn--save">сохранить изменения</button>
+            </div>
+          </div>
+
+          <div class="decor__options additionally additionally--decor">
+            <div class="decor__additionally-header additionally__header additionally__header--decor">
+              <h4 class="decor__additionally-title text additionally__title">Резидентские IPv4</h4>
+              <div class="country"><img src="/assets/img/icons/flags/germany.svg" alt=""> <span>Германия</span></div>
+              <div class="caret caret--additionally caret--close"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="decor__right">
+          <div class="currencies">
+            <span class="text">Цены в</span>
+            <div class="currency tab tab--active">rub</div>
+            <div class="currency tab">usd</div>
+            <div class="currency tab">eur</div>
+          </div>
+
+          <div class="result decor__result">
+            <h2 class="decor__all result__all">5 110 RUB</h2>
+            <span class="result__unit text decor__unit">2 555 RUB за шт.</span>
+          </div>
+
+          <div class="stock decor__stock">
+            <p class="stock__text body-text body-text--small">Добавьте в корзину еще 50 прокси и сэкономьте 10 000 RUB
+            </p>
+            <button class="stock__btn">Добавить</button>
+          </div>
+
+
+          <div class="decor__discount">
+            <div class="decor__promo">
+              <span class="body-text body-text--small decor__promo-text">Скидки</span>
+              <div class="decor__promo-info">
+                <span class="body-text">Промокод <span>SFSFS444</span></span>
+                <div class="decor__benefit text">-2 111₽</div>
+                <span class="decor__delete text">Удалить промокод</span>
+              </div>
+            </div>
+            <div class="decor__enter-promo">
+              <input class="input" type="text" placeholder="Введите промокод">
+              <button class="promo-button decor__promo-button">применить</button>
+            </div>
+          </div>
+
+          <div class="payment">
+            <span class="text payment__prompt">Выберите способ оплаты</span>
+            <div class="payment__dropdown dropdown dropdown--payment">
+              <button id="dLabel-40" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Lava (Банковские карты РФ)</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu--payment" aria-labelledby="dLabel-40">
+                <li>Lava (Банковские карты РФ)</li>
+                <li>Lava (Банковские карты РФ) IPv4</li>
+                <li>Lava (Банковские карты РФ) IPv6</li>
+              </ul>
+            </div>
+            <button class="button payment__button">оформить</button>
+            <div class="payment__check">
+              <div class="check-box">
+                <input type="checkbox" name="payment-checkbox" id="payment-1">
+                <label for="payment-1" class="payment__label body-text body-text--small">Я принимаю <span>условия
+                    использования</span></label>
+              </div>
+              <div class="payment__update body-text body-text--small">(обновлено от <span>29.05.2021</span>)</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="decor__close close">
+          <img data-close="decor" src="/assets/img/icons/close.svg" alt="">
+        </div>
       </div>
     </section>
   </main>
