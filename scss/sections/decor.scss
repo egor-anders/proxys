@@ -1,12 +1,12 @@
 .decor {
   &__container {
     display: flex;
+    align-items: flex-start;
     padding-top: 20px;
     padding-left: 60px;
 
     @media (max-width: $breakpoint-lg) {
       flex-wrap: wrap;
-      align-items: flex-start;
       row-gap: 6px;
       width: 640px;
       margin: 0 auto;
