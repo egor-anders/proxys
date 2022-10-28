@@ -201,4 +201,29 @@ addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach((dropdown) => {
+    let buttonContent;
+
+    if (!dropdown.classList.contains('dropdown--country')) {
+      buttonContent = dropdown.querySelector('button span');
+      const dropdownItems = dropdown.querySelectorAll('.dropdown-menu li');
+      const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+      const activeElement = document.createElement('li');
+      activeElement.textContent = buttonContent.textContent;
+      activeElement.style.color = '#fff';
+      dropdownMenu.prepend(activeElement);
+
+      dropdownItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          const buffer = buttonContent.textContent;
+          buttonContent.textContent = item.textContent;
+          item.textContent = buffer;
+          activeElement.textContent = buttonContent.innerHTML;
+        });
+      });
+    }
+  });
 });
