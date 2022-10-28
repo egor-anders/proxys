@@ -205,10 +205,8 @@ addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('.dropdown');
 
   dropdowns.forEach((dropdown) => {
-    let buttonContent;
-
     if (!dropdown.classList.contains('dropdown--country')) {
-      buttonContent = dropdown.querySelector('button span');
+      const buttonContent = dropdown.querySelector('button span');
       const dropdownItems = dropdown.querySelectorAll('.dropdown-menu li');
       const dropdownMenu = dropdown.querySelector('.dropdown-menu');
       const activeElement = document.createElement('li');
@@ -225,5 +223,14 @@ addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+  });
+
+  $(document).ready(function(){
+    $("#inputCountries").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $(".content__countries label").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
   });
 });
