@@ -145,8 +145,54 @@ addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  $('.decor__delete').click(function () {
-    $('.decor__promo').hide();
+  // $('.decor__delete').click(function () {
+  //   $('.decor__promo').hide();
+  // });
+  const promoArr = [];
+
+  const decorPromo = document.querySelector('.decor__promo');
+  const promoInput = document.querySelector('.decor__enter-promo input');
+  const promoSubmit = document.querySelector('.decor__enter-promo button');
+
+  function promoDel() {
+    const decorPromoInfo = document.querySelectorAll('.decor__promo-info');
+
+    decorPromoInfo.forEach((item) => {
+      promoArr.push(item);
+      const promoDelete = item.querySelector('.decor__delete');
+      promoDelete.addEventListener('click', () => {
+        promoArr.splice(promoArr.indexOf(`${item}`), 1);
+        item.remove();
+        console.log();
+        if (decorPromo.textContent.trim() == 'Скидки') {
+          decorPromo.style.display = 'none';
+        }
+      });
+    });
+  }
+  promoDel();
+
+  promoSubmit.addEventListener('click', () => {
+    if ((promoInput.value != '') & (String(promoInput.value).length <= 8)) {
+      const promocode = document.createElement('div');
+      promocode.classList.add('decor__promo-info');
+      promocode.innerHTML = `
+        <span class="body-text">Промокод <span>${promoInput.value}</span></span>
+        <div class="decor__benefit text">-2 111₽</div>
+        <span class="decor__delete text">Удалить промокод</span>
+        `;
+      decorPromo.append(promocode);
+      promoArr.push(promocode);
+      promoInput.value = '';
+      decorPromo.style.display = 'block';
+      promoDel();
+    } else {
+      promoInput.style.border = '1px solid #C75D54';
+    }
+  });
+
+  promoInput.addEventListener('input', () => {
+    promoInput.removeAttribute('style');
   });
 
   const additionally = document.querySelectorAll('.additionally');
@@ -155,7 +201,12 @@ addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', (e) => {
       if (e.target.classList.contains('caret--additionally')) {
         e.target.classList.toggle('caret--close');
-        item.querySelector('.additionally__rows').classList.toggle('hide');
+
+        try {
+          item.querySelector('.additionally__rows').classList.toggle('hide');
+        } catch {
+          
+        }
       }
     });
   });
@@ -286,33 +337,6 @@ addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const dropdownMobile = document.querySelector('.dropdown--country-mobile');
-  const buttonMobile = dropdownMobile.querySelector('button'),
-    dropdownMobileItems = dropdownMobile.querySelectorAll('.country--mobile');
-  dropdownMobileItems.forEach((element) => {
-    element.addEventListener('click', () => {
-      buttonMobile.innerHTML = `<span class="country"><span>${element.querySelector('span').textContent}</span> <img src=${
-        element.querySelector('img').src
-      } alt=""></span>
-      <span class="caret"></span>`;
-      dropdownMobile.classList.remove('open');
-      dropdownMobile.querySelector('.dropdown-backdrop').remove();
-    });
-  });
-
-  function search(inputSelector, elementSelector) {
-    $(document).ready(function () {
-      $(inputSelector).on('keyup', function () {
-        var value = $(this).val().toLowerCase();
-        $(elementSelector).filter(function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        });
-      });
-    });
-  }
-
-  search('#inputCountries', '.content__countries label');
-  search('#inputCountries-2', '.content__countries--mobile .country');
 
   for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
