@@ -206,31 +206,141 @@ addEventListener('DOMContentLoaded', () => {
 
   dropdowns.forEach((dropdown) => {
     if (!dropdown.classList.contains('dropdown--country')) {
+      const button = dropdown.querySelector('button');
       const buttonContent = dropdown.querySelector('button span');
       const dropdownItems = dropdown.querySelectorAll('.dropdown-menu li');
       const dropdownMenu = dropdown.querySelector('.dropdown-menu');
       const activeElement = document.createElement('li');
       activeElement.textContent = buttonContent.textContent;
-      activeElement.style.color = '#fff';
+
+      if (dropdown.classList.contains('dropdown--mobile')) {
+        activeElement.style.color = '#88C136';
+      } else {
+        activeElement.style.color = '#fff';
+      }
       dropdownMenu.prepend(activeElement);
 
       dropdownItems.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
           const buffer = buttonContent.textContent;
           buttonContent.textContent = item.textContent;
           item.textContent = buffer;
-          activeElement.textContent = buttonContent.innerHTML;
+          activeElement.textContent = buttonContent.textContent;
+          bufferAttValue = item.getAttribute('data-content');
+
+          if (e.target.getAttribute('data-content') == 'individual') {
+            hideContent();
+            document.querySelector('.content__main--individual').style.display = 'block';
+          } else if (e.target.getAttribute('data-content') == 'mobile') {
+            hideContent();
+            document.querySelector('.content__main--mobile').style.display = 'block';
+          } else if (e.target.getAttribute('data-content') == 'shared') {
+            hideContent();
+            document.querySelector('.content__main--shared').style.display = 'block';
+          } else if (e.target.getAttribute('data-content') == 'resident') {
+            hideContent();
+            document.querySelector('.content__main--resident').style.display = 'block';
+          } else if (e.target.getAttribute('data-content') == 'individual-ipv6') {
+            hideContent();
+            document.querySelector('.content__main--individual-ipv6').style.display = 'block';
+          } else if (e.target.getAttribute('data-content') == 'dynamic') {
+            hideContent();
+            document.querySelector('.content__main--dynamic').style.display = 'block';
+          }
+
+          item.setAttribute('data-content', button.getAttribute('data-content'));
+          button.setAttribute('data-content', bufferAttValue);
         });
       });
     }
   });
 
-  $(document).ready(function(){
-    $("#inputCountries").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $(".content__countries label").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  const dropdownsCountry = document.querySelectorAll('.dropdown--country');
+
+  dropdownsCountry.forEach((item) => {
+    let button = item.querySelector('button'),
+      buttonImg = item.querySelector('button img'),
+      buttonText = item.querySelector('button span'),
+      dropdownList = item.querySelector('.dropdown-menu--country'),
+      dropdownItems = item.querySelectorAll('.dropdown-menu--country li');
+    const activeElement = document.createElement('li');
+    activeElement.innerHTML = `<img class="header__flag" alt="" src=${buttonImg.src}><span class="active">${buttonText.textContent}</span>`;
+    dropdownList.prepend(activeElement);
+
+    dropdownItems.forEach((element) => {
+      element.addEventListener('click', () => {
+        buttonImg = item.querySelector('button img');
+        buttonText = item.querySelector('button span');
+        let bufferImgSrc = buttonImg.src;
+        let bufferText = buttonText.textContent;
+        console.log(buttonText.textContent, buttonImg.src);
+
+        button.innerHTML = `<img class="header__flag" alt="" src=${element.querySelector('img').src}>
+                            <span>${element.querySelector('span').textContent}</span>
+                            <span class="caret"></span>`;
+        activeElement.innerHTML = `<img class="header__flag" alt="" src=${element.querySelector('img').src}><span class="active">${
+          element.querySelector('span').textContent
+        }</span>`;
+        element.innerHTML = `<img class="header__flag" alt="" src=${bufferImgSrc}><span>${bufferText}</span>`;
       });
+    });
+  });
+
+  const dropdownMobile = document.querySelector('.dropdown--country-mobile');
+  const buttonMobile = dropdownMobile.querySelector('button'),
+    dropdownMobileItems = dropdownMobile.querySelectorAll('.country--mobile');
+  dropdownMobileItems.forEach((element) => {
+    element.addEventListener('click', () => {
+      buttonMobile.innerHTML = `<span class="country"><span>${element.querySelector('span').textContent}</span> <img src=${
+        element.querySelector('img').src
+      } alt=""></span>
+      <span class="caret"></span>`;
+      dropdownMobile.classList.remove('open');
+      dropdownMobile.querySelector('.dropdown-backdrop').remove();
+    });
+  });
+
+  function search(inputSelector, elementSelector) {
+    $(document).ready(function () {
+      $(inputSelector).on('keyup', function () {
+        var value = $(this).val().toLowerCase();
+        $(elementSelector).filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+      });
+    });
+  }
+
+  search('#inputCountries', '.content__countries label');
+  search('#inputCountries-2', '.content__countries--mobile .country');
+
+  for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+    e.style.setProperty('--value', e.value);
+    e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+    e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+    e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+  }
+
+  const rangeBlocks = document.querySelectorAll('.slider');
+
+  rangeBlocks.forEach((rangeBlock) => {
+    const range = rangeBlock.querySelector('input[type="range"]');
+    const text = rangeBlock.querySelector('input[type="number"]');
+    $(range).on('input', function () {
+      $(text).val(this.value);
+    });
+
+    $(text).on('input', function () {
+      $(range).val(this.value);
+      range.style.setProperty('--value', this.value);
+    });
+
+    $(text).change(function () {
+      if (+$(this).attr('max') < $(this).val()) {
+        $(this).val($(this).attr('max'));
+      } else if (+$(this).attr('min') > $(this).val()) {
+        $(this).val($(this).attr('min'));
+      }
     });
   });
 });

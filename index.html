@@ -35,9 +35,8 @@
               <span>RU</span>
               <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel-1">
-              <li class="active"><img class="header__flag" alt="" src="/assets/img/icons/russia.svg">RU</li>
-              <li><img class="header__flag" alt="" src="/assets/img/icons/eng.svg">EN</li>
+            <ul class="dropdown-menu dropdown-menu--country" aria-labelledby="dLabel-1">
+              <li><img class="header__flag" alt="" src="/assets/img/icons/eng.svg"><span>EN</span></li>
             </ul>
           </li>
         </ul>
@@ -397,25 +396,22 @@
 
         <div class="content__mobile-filters">
           <div class="content__mobile-dropdown content__mobile-dropdown--hit dropdown dropdown--mobile">
-            <button id="dLabel-13" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button data-content="individual" id="dLabel-13" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Индивидуальные IPV4</span>
-              <span class="marker marker--hit marker--mobile">хит продаж</span>
               <span class="caret caret--mobile"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu--mobile" aria-labelledby="dLabel-13">
-              <li class="active">Индивидуальные IPV4 <div class="marker marker--hit">хит продаж</div>
+              <li data-content="shared">Шареды (расшаренные)
               </li>
-              <li>Шареды (расшаренные) <div class="marker marker--popular">популярное</div>
-              </li>
-              <li>Мобильные</li>
-              <li>Резидентские IPv4</li>
-              <li>Индивидуальные IPv6</li>
-              <li>Динамические IPV6</li>
+              <li data-content="mobile">Мобильные</li>
+              <li data-content="resident">Резидентские IPv4</li>
+              <li data-content="individual-ipv6">Индивидуальные IPv6</li>
+              <li data-content="dynamic">Динамические IPV6</li>
             </ul>
           </div>
           <div class="content__mobile-countries">
             <h4 class="content__subtitle text">Выбрать страну</h4>
-            <div class="content__mobile-dropdown dropdown dropdown--filter">
+            <div class="content__mobile-dropdown dropdown dropdown--filter dropdown--country-mobile">
               <button id="dLabel-14" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="country"><span>Россия</span> <img src="/assets/img/icons/flags/russia.svg" alt=""></span>
                 <span class="caret"></span>
@@ -424,7 +420,7 @@
                 <h4 class="content__subtitle content__subtitle--mobile text">Выбрать страну</h4>
                 <form class="content__form content__form--mobile">
                   <div class="content__search content__search--mobile">
-                    <input class="content__input input" type="text" value="" placeholder="Введите страну">
+                    <input id="inputCountries-2" class="content__input input" type="text" value="" placeholder="Введите страну">
                   </div>
                   <div class="content__countries content__countries--mobile">
                     <div class="country country--mobile"><span>Великобритания</span> <img
@@ -539,9 +535,9 @@
             <div class="content__options">
               <div class="buy-row buy-row--color buy-row--border content__tooltip-wrapper">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -570,7 +566,6 @@
               <div class="buy-row buy-row--color buy-row--border">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-7" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span>Windows</span>
                     <span class="caret"></span>
@@ -717,9 +712,9 @@
             <div class="content__options">
               <div class="buy-row buy-row--color buy-row--border content__tooltip-wrapper">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -748,7 +743,6 @@
               <div class="buy-row buy-row--color buy-row--border">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-70" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span>Windows</span>
                     <span class="caret"></span>
@@ -909,9 +903,9 @@
               </div>
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -937,7 +931,6 @@
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-17" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <span>Windows</span>
@@ -1083,9 +1076,9 @@
               </div>
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -1111,7 +1104,6 @@
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-270" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <span>Windows</span>
@@ -1253,9 +1245,9 @@
               </div>
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -1281,7 +1273,6 @@
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-170" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <span>Windows</span>
@@ -1420,9 +1411,9 @@
               </div>
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">Количество IP адрессов</div>
-                <div class="content__slider">
-                  <input type="number" class="input content__slider-text" value="50" min="1" max="200">
-                  <input type="range" class="content__range" value="50" min="1" max="200" step="1">
+                <div class="content__slider slider">
+                  <input type="number" class="input content__slider-text" min="1" max="200" value="50" required>
+                  <input type="range" class="styled-slider slider-progress" min="1" max="200" value="50" step="1">
                   <div class="content__from-to">
                     <span>1</span>
                     <span>200</span>
@@ -1448,7 +1439,6 @@
               <div class="buy-row">
                 <div class="content__option body-text body-text--small">pOSf - отпечаток</div>
                 <div class="content__dropdown dropdown dropdown--filter">
-                  <div class="marker marker--exclusive content__marker">эксклюзив</div>
                   <button id="dLabel-470" type="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
                     <span>Windows</span>
@@ -1610,9 +1600,9 @@
               </div>
               <div class="buy-row buy-row--border buy-row--additionally buy-row--decor">
                 <div class="body-text body-text--small decor__prompt">Количество IP адрессов</div>
-                <div class="decor__slider decor__slider--fixed">
+                <div class="decor__slider slider decor__slider--fixed">
                   <input type="number" class="input decor__slider-text" value="16" min="1" max="200">
-                  <input type="range" class="decor__range" value="50" min="1" max="200" step="1">
+                  <input type="range" class="decor__range styled-slider slider-progress" value="50" min="1" max="200" step="1">
                 </div>
               </div>
               <div class="buy-row buy-row--additionally  buy-row--transparent buy-row--decor">
