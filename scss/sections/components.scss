@@ -882,6 +882,14 @@ ul {
     span {
       color: $color-brand;
     }
+
+    &--error {
+      color: #C75D54;
+
+      * {
+        color: #C75D54 !important;
+      }
+    }
   }
 
   &__update {

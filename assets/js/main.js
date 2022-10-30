@@ -367,4 +367,15 @@ addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  document.querySelector('.payment__button').addEventListener('click', (e) => {
+    const checkbox = e.target.parentNode.querySelector('#payment-1');
+    const checkboxLabel = e.target.parentNode.querySelector('.payment__label');
+
+    if (!checkbox.checked) {
+      checkboxLabel.classList.add('payment__label--error');
+    } else {
+      checkboxLabel.classList.remove('payment__label--error');
+    }
+  });
 });
