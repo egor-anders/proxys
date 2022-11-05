@@ -761,30 +761,28 @@ ul {
   &--history {
     padding-left: 50px;
 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-popup) {
       padding-left: 0;
     }
-  }
-
-  @media (max-width: $breakpoint-lg) {
-    top: 63px;
-    width: 100%;
-    margin-left: 0;
   }
 
 
   &--deposit {
     padding-left: 50px;
 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-popup) {
       padding-left: 0;
     }
   }
 
-  @media (max-width: $breakpoint-lg) {
-    top: 63px;
+  @media (max-width: $breakpoint-popup) {
     width: 100%;
     margin-left: 0;
+  }
+
+
+  @media (max-width: $breakpoint-lg) {
+    top: 63px;
   }
 }
 
