@@ -737,14 +737,15 @@ ul {
 
 .popup {
   position: absolute;
-  top: 81px;
-  left: 0;
+  top: 0;
+  left: calc((100vw - 1160px) / 2);
   z-index: 3;
   display: none;
-  width: 81%;
-  min-height: 100vh;
-  margin-left: 19%;
+  width: calc(100vw - (100vw - 1160px) / 2);
+  min-height: 100%;
+  max-height: 100%;
   padding-bottom: 60px;
+  overflow: hidden;
   background: #1E1E1E;
   box-shadow: -10px 0 34px rgb(0 0 0 / 50%);
 
@@ -761,28 +762,29 @@ ul {
   &--history {
     padding-left: 50px;
 
-    @media (max-width: $breakpoint-popup) {
+    @media (max-width: $breakpoint-lg) {
       padding-left: 0;
     }
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    left: 0;
+    width: 100%;
   }
 
 
   &--deposit {
     padding-left: 50px;
 
-    @media (max-width: $breakpoint-popup) {
+    @media (max-width: $breakpoint-lg) {
       padding-left: 0;
     }
   }
 
-  @media (max-width: $breakpoint-popup) {
+  @media (max-width: $breakpoint-lg) {
+    top: 0;
     width: 100%;
     margin-left: 0;
-  }
-
-
-  @media (max-width: $breakpoint-lg) {
-    top: 63px;
   }
 }
 

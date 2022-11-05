@@ -9,15 +9,6 @@
     padding-bottom: 70px;
     padding-left: 50px;
 
-    @media (max-width: $breakpoint-popup) {
-      justify-content: space-between;
-      width: 1190px;
-      margin: 0 auto;
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-
-
     @media (max-width: $breakpoint-lg) {
       flex-wrap: wrap;
       width: 670px;
@@ -108,21 +99,49 @@
     }
   }
 
-  // &__table {
-  //   overflow: hidden;
-  // }
+  &__table {
+    margin-top: 28px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: auto;
+      
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: #444444;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      background: #FFFFFF;
+    }
+    &::-webkit-scrollbar:horizontal{
+      height: 4px;
+      background-color: #444444;
+    }
+    &::-webkit-scrollbar-thumb:horizontal{
+      background: #FFFFFF;
+      height: 2px;
+            
+    }
+  }
 
   &__captions {
     display: grid;
     grid-template-columns: 5% 21% 25% 27% 14% 13%;
     width: 100%;
-    margin-top: 28px;
     padding: 0 16px;
     padding-right: 50px;
 
     @media (max-width: $breakpoint-lg) {
       grid-template-columns: 6% 19% 24% 27% 12% 12%;
       padding: 8px 10px;
+      width: 636px;
     }
   }
 
@@ -145,8 +164,6 @@
     height: 504px;
     margin-top: 12px;
     padding-right: 30px;
-    overflow-x: hidden;
-    overflow-y: scroll;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -171,7 +188,12 @@
 
     @media (max-width: $breakpoint-md) {
       width: 640px;
-      overflow-x: scroll;
+    }
+  }
+  @media (max-width: $breakpoint-lg) {
+    &__main{
+    
+      width: 100%;
     }
   }
 
