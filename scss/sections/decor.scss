@@ -71,6 +71,15 @@
     }
   }
 
+  &__additionally-header {
+    display: grid;
+    grid-template-columns: 1fr 38% min-content;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr min-content min-content;
+    }
+  }
+
   &__slider-text {
     width: 220px;
     padding: 4px 0 4px 16px;

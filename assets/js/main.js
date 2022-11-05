@@ -25,6 +25,7 @@ addEventListener('DOMContentLoaded', () => {
       menuBtn.classList.remove('header__menu-btn--open');
       decor.classList.toggle('popup--open');
       document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.toggle('noscroll');
     });
   });
 
@@ -71,6 +72,7 @@ addEventListener('DOMContentLoaded', () => {
       if (e.target.getAttribute('data-close') != 'modal') {
         popups.forEach((popup) => {
           popup.classList.remove('popup--open');
+          document.body.classList.remove('noscroll');
         });
       }
     });
@@ -81,6 +83,7 @@ addEventListener('DOMContentLoaded', () => {
       popups.forEach((popup) => {
         popup.classList.remove('popup--open');
         menu.classList.remove('menu--open');
+        document.body.classList.remove('noscroll');
       });
     }
   });
@@ -204,9 +207,11 @@ addEventListener('DOMContentLoaded', () => {
 
         try {
           item.querySelector('.additionally__rows').classList.toggle('hide');
-        } catch {
-          
-        }
+        } catch {}
+
+        try {
+          item.querySelector('.decor__additionally-title').classList.toggle('additionally__title--active');
+        } catch {}
       }
     });
   });
@@ -337,7 +342,6 @@ addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
     e.style.setProperty('--min', e.min == '' ? '0' : e.min);
@@ -372,7 +376,7 @@ addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', (e) => {
       const checkbox = e.target.parentNode.querySelector('input[type=checkbox]');
       const checkboxLabel = e.target.parentNode.querySelector('label');
-  
+
       if (!checkbox.checked) {
         checkboxLabel.classList.add('payment__label--error');
       } else {
