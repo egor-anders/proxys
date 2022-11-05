@@ -26,6 +26,7 @@ addEventListener('DOMContentLoaded', () => {
       decor.classList.toggle('popup--open');
       document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
       document.body.classList.toggle('noscroll');
+      document.querySelector('html').classList.toggle('scroll');
     });
   });
 
@@ -73,6 +74,7 @@ addEventListener('DOMContentLoaded', () => {
         popups.forEach((popup) => {
           popup.classList.remove('popup--open');
           document.body.classList.remove('noscroll');
+          document.querySelector('html').classList.remove('scroll');
         });
       }
     });
@@ -84,6 +86,7 @@ addEventListener('DOMContentLoaded', () => {
         popup.classList.remove('popup--open');
         menu.classList.remove('menu--open');
         document.body.classList.remove('noscroll');
+        document.querySelector('html').classList.remove('scroll');
       });
     }
   });

@@ -1316,3 +1316,10 @@ input[type='range'].styled-slider.slider-progress:active::-ms-fill-lower {
 .noscroll {
   overflow: hidden;
 }
+
+
+.scroll {
+  @media (min-width: $breakpoint-lg) {
+    overflow-y: scroll;
+  }
+}
