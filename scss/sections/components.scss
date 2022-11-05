@@ -784,6 +784,7 @@ ul {
   @media (max-width: $breakpoint-lg) {
     top: 0;
     width: 100%;
+    min-height: 100vh;
     margin-left: 0;
   }
 }
