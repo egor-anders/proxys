@@ -291,6 +291,7 @@ addEventListener('DOMContentLoaded', () => {
 
       if (dropdown.classList.contains('dropdown--mobile')) {
         activeElement.style.color = '#88C136';
+        activeElement.innerHTML = `Индивидуальные IPV4 <div class="marker--dropdown marker--hit">хит продаж</div>`;
       } else {
         activeElement.style.color = '#fff';
       }
@@ -306,12 +307,14 @@ addEventListener('DOMContentLoaded', () => {
 
           if (e.target.getAttribute('data-content') == 'individual') {
             hideContent();
+            activeElement.innerHTML = `Индивидуальные IPV4 <div class="marker--dropdown marker--hit">хит продаж</div>`;
             document.querySelector('.content__main--individual').style.display = 'block';
           } else if (e.target.getAttribute('data-content') == 'mobile') {
             hideContent();
             document.querySelector('.content__main--mobile').style.display = 'block';
           } else if (e.target.getAttribute('data-content') == 'shared') {
             hideContent();
+            activeElement.innerHTML = `Шареды (расшаренные) <div class="marker--dropdown marker--popular">популярное</div>`;
             document.querySelector('.content__main--shared').style.display = 'block';
           } else if (e.target.getAttribute('data-content') == 'resident') {
             hideContent();
