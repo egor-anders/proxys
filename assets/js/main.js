@@ -6,10 +6,18 @@ addEventListener('DOMContentLoaded', () => {
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('header__menu-btn--open');
     menu.classList.toggle('menu--open');
+    if(window.innerWidth<1200){
+      document.body.classList.toggle('noscroll');
+      document.querySelector('html').classList.toggle('scroll');
+    }
   });
 
   headerBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
+    if(window.innerWidth<1200){
+      document.body.classList.toggle('noscroll');
+      document.querySelector('html').classList.toggle('scroll');
+    }
   });
 
   const carts = document.querySelectorAll('[data-cart]'),
@@ -65,6 +73,9 @@ addEventListener('DOMContentLoaded', () => {
       } else {
         history.classList.toggle('popup--open');
       }
+      document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.toggle('noscroll');
+      document.querySelector('html').classList.toggle('scroll');
     });
   });
 
@@ -73,6 +84,7 @@ addEventListener('DOMContentLoaded', () => {
       if (e.target.getAttribute('data-close') != 'modal') {
         popups.forEach((popup) => {
           popup.classList.remove('popup--open');
+          document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
           document.body.classList.remove('noscroll');
           document.querySelector('html').classList.remove('scroll');
         });
@@ -84,6 +96,7 @@ addEventListener('DOMContentLoaded', () => {
     if (e.keyCode === 27) {
       popups.forEach((popup) => {
         popup.classList.remove('popup--open');
+        document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
         menu.classList.remove('menu--open');
         document.body.classList.remove('noscroll');
         document.querySelector('html').classList.remove('scroll');
@@ -220,9 +233,14 @@ addEventListener('DOMContentLoaded', () => {
   });
 
   try {
-    document.querySelector('[data-deposit]').addEventListener('click', () => {
-      document.querySelector('.popup--deposit').classList.toggle('popup--open');
-    });
+    if(document.querySelector('[data-deposit]')){
+      document.querySelector('[data-deposit]').addEventListener('click', () => {
+        document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('.popup--deposit').classList.toggle('popup--open');
+        document.body.classList.toggle('noscroll');
+        document.querySelector('html').classList.toggle('scroll');
+      });
+    }
   } catch {
     console.log('error');
   }
@@ -232,7 +250,6 @@ addEventListener('DOMContentLoaded', () => {
 
   promo.addEventListener('click', (e) => {
     if (e.target.classList.contains('stock__btn')) {
-      console.log(123);
       proxyAmount.value = parseInt(proxyAmount.value) + 50;
       proxyAmount.style.color = '#88C136';
       setTimeout(() => {

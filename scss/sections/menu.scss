@@ -14,7 +14,9 @@
 
   @media (max-width: $breakpoint-lg) {
     top: 64px;
+    height:calc(100vh - 64px);
     padding: 20px 0 45px;
+    overflow: auto;
   }
 
   &__wrapper {

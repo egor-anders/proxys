@@ -736,16 +736,17 @@ ul {
 
 
 .popup {
-  position: absolute;
-  top: 81px;
+  position: fixed;
+  top: 80px;
   left: calc((100vw - 1160px) / 2);
   z-index: 3;
   display: none;
   width: calc(100vw - (100vw - 1160px) / 2);
   min-height: 100%;
-  max-height: 100%;
+  max-height: calc(100% - 80px);
   padding-bottom: 60px;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
   background: #1E1E1E;
   box-shadow: -10px 0 34px rgb(0 0 0 / 50%);
 
@@ -756,7 +757,7 @@ ul {
   &--decor {
     height: 100%;
     min-height: 100%;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   &--history {
@@ -765,11 +766,6 @@ ul {
     @media (max-width: $breakpoint-lg) {
       padding-left: 0;
     }
-  }
-
-  @media (max-width: $breakpoint-lg) {
-    left: 0;
-    width: 100%;
   }
 
 
@@ -782,9 +778,10 @@ ul {
   }
 
   @media (max-width: $breakpoint-lg) {
-    top: 63px;
+    top: 64px;
+    max-height: calc(100% - 64px);
     width: 100%;
-    min-height: 100vh;
+    left: 0;
     margin-left: 0;
   }
 }
@@ -1021,6 +1018,18 @@ input[type='number'] {
 
 
 .modal {
+  &:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #1E1E1E;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  
   &-dialog {
     width: fit-content;
     margin: 140px auto 0;

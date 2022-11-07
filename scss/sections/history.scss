@@ -111,7 +111,7 @@
     }
 
     @media (max-width: $breakpoint-md) {
-      height: 793px;
+      height: unset;
       margin-bottom: 60px;
     }
   }
